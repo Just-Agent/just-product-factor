@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/product-factor-skills/skill-manifest.schema.json",
+  "title": "Product Factor Skill Manifest",
+  "type": "object",
+  "required": [
+    "name",
+    "version",
+    "title",
+    "summary",
+    "category",
+    "agent_callable",
+    "recommended_trigger_phrases",
+    "required_files",
+    "expected_inputs",
+    "expected_outputs",
+    "review_protocol"
+  ],
+  "properties": {
+    "name": {"type": "string", "pattern": "^[0-9]+-factor-[a-z0-9-]+$|^xx-factor-[a-z0-9-]+$"},
+    "version": {"type": "string", "pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "title": {"type": "string"},
+    "summary": {"type": "string"},
+    "category": {"type": "string"},
+    "agent_callable": {"type": "boolean"},
+    "status": {"type": "string"},
+    "recommended_trigger_phrases": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "required_files": {"type": "array", "items": {"type": "string"}, "minItems": 6},
+    "expected_inputs": {"type": "array", "items": {"type": "string"}},
+    "expected_outputs": {"type": "array", "items": {"type": "string"}},
+    "tags": {"type": "array", "items": {"type": "string"}},
+    "review_protocol": {"type": "array", "items": {"type": "string"}, "minItems": 3}
+  },
+  "additionalProperties": true
+}

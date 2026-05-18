@@ -1,0 +1,59 @@
+{
+  "name": "14-factor-security-privacy",
+  "version": "v0.9.0",
+  "title": "14-factor-security-privacy",
+  "summary": "Audit repositories for secrets, permissions, data handling, dependency hygiene, CI/CD safety, Agent/tool boundaries, privacy posture, and release blockers.",
+  "category": "security-privacy",
+  "agent_callable": true,
+  "status": "draft-stable",
+  "recommended_trigger_phrases": [
+    "Use the 14-factor-security-privacy skill to audit this repository for secrets, permissions, data handling, dependency hygiene, CI/CD safety, and release blockers.",
+    "Use the 14-factor-security-privacy skill after 12-factor-agents to review tool permissions, prompt injection risk, destructive actions, secrets, and log safety.",
+    "Use the 14-factor-security-privacy skill with 8-factor-github-actions to check workflow permissions, secrets exposure, release artifact safety, and deployment approval gates."
+  ],
+  "required_files": [
+    "SKILL.md",
+    "checklist.md",
+    "audit-report-template.md",
+    "refactor-plan-template.md",
+    "scoring-rubric.md",
+    "usage-examples.md",
+    "skill.json"
+  ],
+  "expected_inputs": [
+    "repository tree or zip archive",
+    "README and release notes",
+    "configuration and environment variable docs",
+    "CI/CD workflows",
+    "package manifests and lockfiles",
+    "tool schemas and integration docs",
+    "logs, examples, and sample data"
+  ],
+  "expected_outputs": [
+    "security/privacy audit report",
+    "14-factor scorecard",
+    "trust boundary map",
+    "critical blocker list",
+    "mitigation refactor plan",
+    "validation summary",
+    "paired Skill recommendation"
+  ],
+  "tags": [
+    "security",
+    "privacy",
+    "secrets",
+    "permissions",
+    "ci-cd",
+    "supply-chain",
+    "release-readiness",
+    "Agent-native"
+  ],
+  "review_protocol": [
+    "Identify data, credentials, tools, integrations, workflows, and release context.",
+    "Map trust boundaries and high-risk operations.",
+    "Review secret hygiene, configuration, permissions, logs, dependencies, and CI/CD.",
+    "Apply the 14-factor checklist and scoring rubric.",
+    "Prioritize critical blockers before polish.",
+    "Record validation evidence and limits honestly."
+  ]
+}

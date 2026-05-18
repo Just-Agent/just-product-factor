@@ -1,0 +1,54 @@
+{
+  "name": "5-factor-evals",
+  "version": "v0.9.0",
+  "title": "5-factor-evals",
+  "summary": "Audit evaluation, regression testing, benchmark, golden-case, failure taxonomy, and release gate systems for Agent-native product projects.",
+  "category": "evaluation",
+  "agent_callable": true,
+  "status": "draft-stable",
+  "recommended_trigger_phrases": [
+    "Use the 5-factor-evals skill to audit this Agent project for golden cases, regression tests, failure taxonomy, and release gates.",
+    "Use the 5-factor-evals skill to add a repeatable evaluation plan before we refactor this RAG pipeline.",
+    "Use the 5-factor-evals skill as a secondary review after 12-factor-agents and 9-factor-rag."
+  ],
+  "required_files": [
+    "SKILL.md",
+    "checklist.md",
+    "audit-report-template.md",
+    "refactor-plan-template.md",
+    "scoring-rubric.md",
+    "usage-examples.md",
+    "skill.json"
+  ],
+  "expected_inputs": [
+    "target project files",
+    "existing tests and examples",
+    "logs or previous evaluation notes",
+    "product goals and acceptance criteria",
+    "release or refactor context"
+  ],
+  "expected_outputs": [
+    "evaluation audit report",
+    "5-factor eval scorecard",
+    "minimum useful eval harness plan",
+    "golden case list",
+    "failure taxonomy",
+    "release gate recommendations",
+    "validation summary"
+  ],
+  "tags": [
+    "evaluation",
+    "regression",
+    "golden-cases",
+    "benchmarks",
+    "release-readiness",
+    "Agent-native"
+  ],
+  "review_protocol": [
+    "Identify the product behavior that must stay reliable.",
+    "Review tests, examples, fixtures, logs, CI, and release notes.",
+    "Apply the 5-factor checklist and scoring rubric.",
+    "Recommend a minimum useful evaluation harness before larger refactors.",
+    "Record validation results and validation limits honestly."
+  ]
+}

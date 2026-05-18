@@ -1,0 +1,54 @@
+{
+  "name": "12-factor-agents",
+  "version": "v0.9.0",
+  "title": "12-factor-agents",
+  "summary": "Audit and refactor LLM Agent systems for reliability, context discipline, tool contracts, control flow, human-in-the-loop design, and production readiness.",
+  "category": "agent",
+  "agent_callable": true,
+  "status": "usable",
+  "recommended_trigger_phrases": [
+    "Use the 12-factor-agents skill to review this agent project.",
+    "Use the 12-factor-agents skill to refactor this project into a production-ready agent architecture."
+  ],
+  "required_files": [
+    "SKILL.md",
+    "checklist.md",
+    "scoring-rubric.md",
+    "audit-report-template.md",
+    "refactor-plan-template.md",
+    "usage-examples.md",
+    "skill.json"
+  ],
+  "expected_inputs": [
+    "README",
+    "agent runtime code",
+    "tool definitions",
+    "prompts",
+    "memory/state design",
+    "evals",
+    "logs",
+    "CI"
+  ],
+  "expected_outputs": [
+    "agent audit report",
+    "factor scorecard",
+    "refactor plan",
+    "validation plan"
+  ],
+  "tags": [
+    "Agent-native",
+    "tool calling",
+    "state",
+    "memory",
+    "eval",
+    "release readiness"
+  ],
+  "review_protocol": [
+    "Identify project type and user-facing goal.",
+    "Inspect relevant files and infer missing context conservatively.",
+    "Apply checklist.md and scoring-rubric.md.",
+    "Produce audit-report-template.md output.",
+    "Produce a prioritized refactor-plan-template.md.",
+    "Run available validation commands or record why they could not run."
+  ]
+}

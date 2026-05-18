@@ -1,0 +1,51 @@
+{
+  "name": "10-factor-html",
+  "version": "v0.9.0",
+  "title": "10-factor-html",
+  "summary": "Improve HTML, landing pages, docs pages, static previews, and generated web pages for semantic structure, responsiveness, accessibility, SEO, performance, visual polish, and Agent handoff quality.",
+  "category": "html",
+  "agent_callable": true,
+  "status": "usable",
+  "recommended_trigger_phrases": [
+    "Use the 10-factor-html skill to improve this HTML page for semantic structure, responsiveness, accessibility, SEO, performance, and visual polish."
+  ],
+  "required_files": [
+    "SKILL.md",
+    "checklist.md",
+    "scoring-rubric.md",
+    "audit-report-template.md",
+    "refactor-plan-template.md",
+    "usage-examples.md",
+    "skill.json"
+  ],
+  "expected_inputs": [
+    "HTML",
+    "CSS",
+    "assets",
+    "target audience",
+    "screenshot/preview",
+    "performance constraints"
+  ],
+  "expected_outputs": [
+    "HTML audit",
+    "accessibility/SEO scorecard",
+    "refactor plan",
+    "improved page guidance"
+  ],
+  "tags": [
+    "HTML",
+    "accessibility",
+    "SEO",
+    "responsive",
+    "performance",
+    "visual polish"
+  ],
+  "review_protocol": [
+    "Identify project type and user-facing goal.",
+    "Inspect relevant files and infer missing context conservatively.",
+    "Apply checklist.md and scoring-rubric.md.",
+    "Produce audit-report-template.md output.",
+    "Produce a prioritized refactor-plan-template.md.",
+    "Run available validation commands or record why they could not run."
+  ]
+}

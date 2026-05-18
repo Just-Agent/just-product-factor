@@ -1,0 +1,50 @@
+{
+  "name": "11-factor-cli",
+  "version": "v0.9.0",
+  "title": "11-factor-cli",
+  "summary": "Audit and refactor command-line products so they are installable, understandable, scriptable, observable, testable, and release-ready.",
+  "category": "cli",
+  "agent_callable": true,
+  "status": "draft-stable",
+  "recommended_trigger_phrases": [
+    "Use the 11-factor-cli skill to audit this CLI for installability, command UX, configuration, error handling, logging, testing, packaging, and release readiness."
+  ],
+  "required_files": [
+    "SKILL.md",
+    "checklist.md",
+    "audit-report-template.md",
+    "refactor-plan-template.md",
+    "scoring-rubric.md",
+    "usage-examples.md",
+    "skill.json"
+  ],
+  "expected_inputs": [
+    "Repository tree or zip archive",
+    "README or command documentation",
+    "CLI source files and entrypoints",
+    "package metadata such as package.json, pyproject.toml, Cargo.toml, go.mod, or setup config",
+    "Example commands, tests, workflows, and release scripts when available"
+  ],
+  "expected_outputs": [
+    "CLI audit report with evidence and score",
+    "Refactor plan ranked by user impact and release readiness",
+    "Command UX improvements with example commands",
+    "Packaging, installation, and validation recommendations",
+    "Open issues, assumptions, and next iteration suggestions"
+  ],
+  "tags": [
+    "cli",
+    "developer-experience",
+    "release-readiness",
+    "packaging",
+    "error-handling",
+    "automation"
+  ],
+  "review_protocol": [
+    "Identify the CLI runtime, entrypoint, installation path, and core commands.",
+    "Run or statically inspect help output, examples, config handling, and error messages.",
+    "Score the CLI against the 11-factor checklist.",
+    "Prioritize fixes that make the CLI installable, testable, predictable, and scriptable.",
+    "Return an audit report and concrete refactor plan."
+  ]
+}

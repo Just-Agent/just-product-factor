@@ -1,0 +1,58 @@
+{
+  "name": "15-factor-observability",
+  "version": "v0.9.0",
+  "title": "15-factor-observability",
+  "summary": "Audit runtime visibility, structured logs, metrics, traces, validation artifacts, failure diagnostics, release evidence, privacy-safe debugging, and Agent handoff readiness.",
+  "category": "observability",
+  "agent_callable": true,
+  "status": "draft-stable",
+  "recommended_trigger_phrases": [
+    "Use the 15-factor-observability skill to audit this Agent project for logs, traces, tool-call evidence, validation artifacts, and debuggability.",
+    "Use the 15-factor-observability skill with 14-factor-security-privacy to make this app easier to debug without leaking secrets or user data.",
+    "Use the 15-factor-observability skill with 8-factor-github-actions to improve workflow summaries, failure logs, release artifacts, and deployment diagnostics."
+  ],
+  "required_files": [
+    "SKILL.md",
+    "checklist.md",
+    "audit-report-template.md",
+    "refactor-plan-template.md",
+    "scoring-rubric.md",
+    "usage-examples.md",
+    "skill.json"
+  ],
+  "expected_inputs": [
+    "repository tree or zip archive",
+    "README, quickstart, docs, examples, and troubleshooting notes",
+    "source files, run entrypoints, CLI commands, workflows, and tests",
+    "logs, traces, validation outputs, audit artifacts, and failure reports",
+    "Agent traces, tool-call records, RAG retrieval logs, or MCP invocation records when available"
+  ],
+  "expected_outputs": [
+    "observability audit report",
+    "15-factor scorecard",
+    "runtime map",
+    "critical blind spot list",
+    "logs/metrics/traces/artifacts recommendations",
+    "privacy-safe debugging notes",
+    "observability refactor plan",
+    "validation plan and paired Skill recommendation"
+  ],
+  "tags": [
+    "observability",
+    "logging",
+    "metrics",
+    "tracing",
+    "debugging",
+    "validation-artifacts",
+    "Agent-native",
+    "release-readiness"
+  ],
+  "review_protocol": [
+    "Map the system's key run paths, dependencies, and failure points.",
+    "Review logs, errors, metrics, traces, artifacts, issue templates, and release evidence.",
+    "Check whether debugging data is useful while remaining privacy-safe.",
+    "Apply the 15-factor checklist and scoring rubric.",
+    "Produce an observability audit report and prioritized refactor plan.",
+    "Recommend paired Skills when observability issues overlap with security, Agent, RAG, MCP, GitHub Actions, CLI, docs, or product readiness."
+  ]
+}

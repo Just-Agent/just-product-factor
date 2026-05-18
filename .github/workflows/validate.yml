@@ -1,0 +1,92 @@
+name: Validate Factor Skills
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Validate repository structure and manifests
+        run: |
+          python -m py_compile scripts/*.py
+          python scripts/scan_factor_project.py .
+          python scripts/run_skill_audit.py --repo . --target ./examples/sample-agent-project --skill 12-factor-agents --out ./tmp/agent-audit
+          test -f ./tmp/agent-audit/audit-summary.json
+
+      - name: Test Skill selector
+        run: |
+          python scripts/select_factor_skill.py "audit this RAG app for retrieval quality and regression tests" --root . --top 5 --json ./tmp/skill-selection.json --markdown ./tmp/skill-selection.md
+          python scripts/select_factor_skill.py "check secrets workflow permissions data retention and deployment safety" --root . --top 5 --json ./tmp/security-selection.json --markdown ./tmp/security-selection.md
+          python scripts/select_factor_skill.py "improve logs traces validation artifacts and debugging handoff" --root . --top 5 --json ./tmp/observability-selection.json --markdown ./tmp/observability-selection.md
+          test -s ./tmp/skill-selection.json
+          test -s ./tmp/skill-selection.md
+          test -s ./tmp/security-selection.json
+          test -s ./tmp/security-selection.md
+          test -s ./tmp/observability-selection.json
+          test -s ./tmp/observability-selection.md
+
+      - name: Test Skill composer
+        run: |
+          python scripts/compose_factor_review.py "prepare this Agent product for release with observability and security" --root . --target ./examples/sample-agent-project --max-skills 4 --out ./tmp/composed-review
+          test -s ./tmp/composed-review/review-plan.md
+          test -s ./tmp/composed-review/review-plan.json
+          test -s ./tmp/composed-review/handoff-prompt.md
+
+      - name: Test Skill prompt renderer
+        run: |
+          python scripts/render_skill_prompt.py 13-factor-product-readiness --target ./examples/sample-agent-project --out ./tmp/product-readiness-prompt.md
+          python scripts/render_skill_prompt.py 5-factor-evals --target ./examples/sample-agent-project --out ./tmp/evals-prompt.md
+          python scripts/render_skill_prompt.py 14-factor-security-privacy --target ./examples/sample-agent-project --out ./tmp/security-privacy-prompt.md
+          python scripts/render_skill_prompt.py 15-factor-observability --target ./examples/sample-agent-project --out ./tmp/observability-prompt.md
+          test -s ./tmp/product-readiness-prompt.md
+          test -s ./tmp/evals-prompt.md
+          test -s ./tmp/security-privacy-prompt.md
+          test -s ./tmp/observability-prompt.md
+
+      - name: Test Skill catalog exporter
+        run: |
+          python scripts/export_skill_catalog.py . --markdown ./tmp/generated-skill-catalog.md --json ./tmp/generated-skill-catalog.json
+          test -s ./tmp/generated-skill-catalog.md
+          test -s ./tmp/generated-skill-catalog.json
+
+      - name: Test Skill generator dry run
+        run: python scripts/generate_factor_skill.py xx-factor-cli --title "xx-factor-cli" --category cli --dry-run
+
+      - name: Check routing and output contract docs
+        run: |
+          test -f docs/skill-routing-guide.md
+          test -f docs/output-contract.md
+          test -f docs/product-readiness-playbook.md
+          test -f docs/skill-prompt-renderer.md
+          test -f docs/documentation-readiness-playbook.md
+          test -f docs/skill-catalog-exporter.md
+          test -f docs/skill-selection-engine.md
+          test -f guides/agent-review-loop.md
+          test -f .github/pull_request_template.md
+          test -f .github/ISSUE_TEMPLATE/skill_request.md
+          test -f examples/skill-selection-prompt.md
+          test -f docs/security-privacy-playbook.md
+          test -f examples/security-privacy-audit-prompt.md
+          test -f templates/security-review-template.md
+          test -f SECURITY.md
+          test -f docs/observability-playbook.md
+          test -f docs/multi-skill-composition-guide.md
+          test -f examples/observability-audit-prompt.md
+          test -f examples/composed-review-prompt.md
+          test -f templates/multi-skill-review-plan-template.md
+
+      - name: Build release zip smoke test
+        run: python scripts/build_release_zip.py . --out /tmp/product-factor-skills-smoke.zip

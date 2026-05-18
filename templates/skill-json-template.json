@@ -1,0 +1,30 @@
+{
+  "name": "xx-factor-example",
+  "version": "v0.1.0",
+  "title": "xx-factor-example",
+  "summary": "Audit and refactor a specific product engineering domain with a repeatable Factor Skill.",
+  "category": "example",
+  "agent_callable": true,
+  "status": "draft",
+  "recommended_trigger_phrases": [
+    "Use the xx-factor-example skill to review this project."
+  ],
+  "required_files": [
+    "SKILL.md",
+    "checklist.md",
+    "scoring-rubric.md",
+    "audit-report-template.md",
+    "refactor-plan-template.md",
+    "usage-examples.md",
+    "skill.json"
+  ],
+  "expected_inputs": ["README", "source files", "configuration", "examples", "tests", "logs"],
+  "expected_outputs": ["audit report", "scorecard", "refactor plan", "validation plan"],
+  "tags": ["Factor Skill", "project audit", "project refactor"],
+  "review_protocol": [
+    "Identify project goal.",
+    "Inspect available files.",
+    "Apply checklist and scoring rubric.",
+    "Return audit report and refactor plan."
+  ]
+}

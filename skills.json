@@ -1,0 +1,142 @@
+{
+  "name": "product-factor-skills",
+  "version": "v0.9.0",
+  "slogan": "Reusable Factor Skills for Agent-native product optimization.",
+  "zh_positioning": "把优秀工程标准，变成 Agent 可以反复调用的产品优化技能。",
+  "repository_type": "multi-skill standard repository",
+  "agent_callable": true,
+  "skills": [
+    {
+      "name": "5-factor-evals",
+      "path": "skills/5-factor-evals",
+      "category": "evaluation",
+      "summary": "Audit evaluation, regression testing, benchmark, golden-case, failure taxonomy, and release gate systems for Agent-native product projects.",
+      "triggers": [
+        "Use the 5-factor-evals skill to audit this Agent project for golden cases, regression tests, failure taxonomy, and release gates.",
+        "Use the 5-factor-evals skill to add a repeatable evaluation plan before we refactor this RAG pipeline."
+      ]
+    },
+    {
+      "name": "6-factor-docs",
+      "path": "skills/6-factor-docs",
+      "category": "documentation",
+      "summary": "Audit and refactor documentation systems for positioning, first-run onboarding, information architecture, examples, accuracy, maintenance, and Agent handoff readiness.",
+      "triggers": [
+        "Use the 6-factor-docs skill to audit this repository documentation for positioning, onboarding, information architecture, examples, accuracy, maintenance, and Agent handoff readiness.",
+        "Use the 6-factor-docs skill to refactor this project's README, guides, examples, and release notes so a new user can complete the first useful action in under five minutes."
+      ]
+    },
+    {
+      "name": "7-factor-mcp",
+      "path": "skills/7-factor-mcp",
+      "category": "mcp",
+      "summary": "Audit MCP servers and clients for tool boundaries, schema clarity, permissions, safety, observability, runtime behavior, and integration quality.",
+      "triggers": [
+        "Use the 7-factor-mcp skill to review this MCP server for tool boundaries, schema clarity, permission design, safety, and integration quality."
+      ]
+    },
+    {
+      "name": "8-factor-github-actions",
+      "path": "skills/8-factor-github-actions",
+      "category": "automation",
+      "summary": "Audit GitHub Actions workflows for CI/CD reliability, permissions, caching, release automation, deployment safety, secrets handling, and reusable automation design.",
+      "triggers": [
+        "Use the 8-factor-github-actions skill to review this workflow for CI/CD reliability, permissions, caching, release automation, and deployment safety."
+      ]
+    },
+    {
+      "name": "9-factor-rag",
+      "path": "skills/9-factor-rag",
+      "category": "rag",
+      "summary": "Audit RAG systems for retrieval quality, chunking, indexing, citation, context control, evaluation, freshness, and answer trustworthiness.",
+      "triggers": [
+        "Use the 9-factor-rag skill to audit this RAG project for retrieval quality, chunking, indexing, citation, context control, and evaluation."
+      ]
+    },
+    {
+      "name": "10-factor-html",
+      "path": "skills/10-factor-html",
+      "category": "html",
+      "summary": "Improve HTML, landing pages, docs pages, static previews, and generated web pages for semantic structure, responsiveness, accessibility, SEO, performance, visual polish, and Agent handoff quality.",
+      "triggers": [
+        "Use the 10-factor-html skill to improve this HTML page for semantic structure, responsiveness, accessibility, SEO, performance, and visual polish."
+      ]
+    },
+    {
+      "name": "11-factor-cli",
+      "path": "skills/11-factor-cli",
+      "category": "cli",
+      "summary": "Audit and refactor command-line products so they are installable, understandable, scriptable, observable, testable, and release-ready.",
+      "triggers": [
+        "Use the 11-factor-cli skill to audit this CLI for installability, command UX, configuration, error handling, logging, testing, packaging, and release readiness."
+      ]
+    },
+    {
+      "name": "12-factor-agents",
+      "path": "skills/12-factor-agents",
+      "category": "agent",
+      "summary": "Audit and refactor LLM Agent systems for reliability, context discipline, tool contracts, control flow, human-in-the-loop design, and production readiness.",
+      "triggers": [
+        "Use the 12-factor-agents skill to review this agent project.",
+        "Use the 12-factor-agents skill to refactor this project into a production-ready agent architecture."
+      ]
+    },
+    {
+      "name": "12-factor-app",
+      "path": "skills/12-factor-app",
+      "category": "application",
+      "summary": "Audit and refactor apps, SaaS products, APIs, services, and CLI tools for deployability, maintainability, configuration, logging, release readiness, and product polish.",
+      "triggers": [
+        "Use the 12-factor-app skill to audit this app for deployability, maintainability, configuration, logging, and release readiness."
+      ]
+    },
+    {
+      "name": "13-factor-product-readiness",
+      "path": "skills/13-factor-product-readiness",
+      "category": "product-readiness",
+      "summary": "Audit and refactor repositories for product positioning, onboarding, examples, validation, release readiness, GitHub polish, Agent-native usage, and launch quality.",
+      "triggers": [
+        "Use the 13-factor-product-readiness skill to audit this repository for launch readiness, onboarding, product polish, release discipline, and open-source credibility.",
+        "Use the 13-factor-product-readiness skill to turn this demo repository into a publishable product-quality open-source project."
+      ]
+    },
+    {
+      "name": "14-factor-security-privacy",
+      "path": "skills/14-factor-security-privacy",
+      "category": "security-privacy",
+      "summary": "Audit repositories for secrets, permissions, data handling, dependency hygiene, CI/CD safety, Agent/tool boundaries, privacy posture, and release blockers.",
+      "triggers": [
+        "Use the 14-factor-security-privacy skill to audit this repository for secrets, permissions, data handling, dependency hygiene, CI/CD safety, and release blockers.",
+        "Use the 14-factor-security-privacy skill after 12-factor-agents to review tool permissions, prompt injection risk, destructive actions, secrets, and log safety."
+      ]
+    },
+    {
+      "name": "15-factor-observability",
+      "path": "skills/15-factor-observability",
+      "category": "observability",
+      "summary": "Audit runtime visibility, structured logs, metrics, traces, validation artifacts, failure diagnostics, release evidence, privacy-safe debugging, and Agent handoff readiness.",
+      "triggers": [
+        "Use the 15-factor-observability skill to audit this Agent project for logs, traces, tool-call evidence, validation artifacts, and debuggability.",
+        "Use the 15-factor-observability skill with 14-factor-security-privacy to make this app easier to debug without leaking secrets or user data."
+      ]
+    }
+  ],
+  "global_protocol": [
+    "Pick the closest Factor Skill.",
+    "Use scripts/select_factor_skill.py when the request spans multiple domains or the primary Skill is unclear.",
+    "Pair 15-factor-observability with 14-factor-security-privacy when debugging data may expose secrets or user data.",
+    "Use 15-factor-observability when failures, logs, traces, validation artifacts, or Agent handoff evidence are weak.",
+    "Use scripts/compose_factor_review.py when a project needs multiple Skills in one repeatable review plan.",
+    "Use 13-factor-product-readiness first when the project needs launch quality or open-source product polish.",
+    "Pair 14-factor-security-privacy with the domain Skill when security findings require technical refactors.",
+    "Use 14-factor-security-privacy before public release, hosted deployment, or open-source distribution when secrets, user data, workflows, tools, or integrations are involved.",
+    "Use 6-factor-docs when adoption depends on README, docs, examples, or Agent handoff prompts.",
+    "Generate an audit workspace when repeatability is required.",
+    "Read the skill.json manifest first.",
+    "Read SKILL.md for workflow and scope.",
+    "Use checklist.md and scoring-rubric.md for evidence-based review.",
+    "Render a one-shot prompt with scripts/render_skill_prompt.py when handoff is needed.",
+    "Return an audit report and refactor plan.",
+    "Record validation limits honestly."
+  ]
+}

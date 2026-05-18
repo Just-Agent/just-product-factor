@@ -1,0 +1,51 @@
+{
+  "name": "8-factor-github-actions",
+  "version": "v0.9.0",
+  "title": "8-factor-github-actions",
+  "summary": "Audit GitHub Actions workflows for CI/CD reliability, permissions, caching, release automation, deployment safety, secrets handling, and reusable automation design.",
+  "category": "automation",
+  "agent_callable": true,
+  "status": "usable",
+  "recommended_trigger_phrases": [
+    "Use the 8-factor-github-actions skill to review this workflow for CI/CD reliability, permissions, caching, release automation, and deployment safety."
+  ],
+  "required_files": [
+    "SKILL.md",
+    "checklist.md",
+    "scoring-rubric.md",
+    "audit-report-template.md",
+    "refactor-plan-template.md",
+    "usage-examples.md",
+    "skill.json"
+  ],
+  "expected_inputs": [
+    ".github/workflows",
+    "README",
+    "release process",
+    "secrets policy",
+    "deployment target",
+    "test commands"
+  ],
+  "expected_outputs": [
+    "workflow audit",
+    "CI/CD reliability scorecard",
+    "security findings",
+    "workflow refactor plan"
+  ],
+  "tags": [
+    "GitHub Actions",
+    "CI/CD",
+    "permissions",
+    "caching",
+    "deployment",
+    "release automation"
+  ],
+  "review_protocol": [
+    "Identify project type and user-facing goal.",
+    "Inspect relevant files and infer missing context conservatively.",
+    "Apply checklist.md and scoring-rubric.md.",
+    "Produce audit-report-template.md output.",
+    "Produce a prioritized refactor-plan-template.md.",
+    "Run available validation commands or record why they could not run."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "name": "6-factor-docs",
+  "version": "v0.9.0",
+  "title": "6-factor-docs",
+  "summary": "Audit and refactor documentation systems for positioning, first-run onboarding, information architecture, examples, accuracy, maintenance, and Agent handoff readiness.",
+  "category": "documentation",
+  "agent_callable": true,
+  "status": "draft-stable",
+  "recommended_trigger_phrases": [
+    "Use the 6-factor-docs skill to audit this repository documentation for positioning, onboarding, information architecture, examples, accuracy, maintenance, and Agent handoff readiness.",
+    "Use the 6-factor-docs skill to refactor this project's README, guides, examples, and release notes so a new user can complete the first useful action in under five minutes."
+  ],
+  "required_files": [
+    "SKILL.md",
+    "checklist.md",
+    "audit-report-template.md",
+    "refactor-plan-template.md",
+    "scoring-rubric.md",
+    "usage-examples.md",
+    "skill.json"
+  ],
+  "expected_inputs": [
+    "README and docs tree",
+    "examples, recipes, and tutorials",
+    "package metadata and CLI help if docs reference commands",
+    "changelog, release notes, and roadmap",
+    "known onboarding friction or user questions"
+  ],
+  "expected_outputs": [
+    "documentation audit report",
+    "6-factor docs scorecard",
+    "reader journey diagnosis",
+    "documentation refactor plan",
+    "Agent handoff readiness review",
+    "validation summary"
+  ],
+  "tags": [
+    "documentation",
+    "README",
+    "onboarding",
+    "examples",
+    "Agent-native",
+    "release-readiness"
+  ],
+  "review_protocol": [
+    "Identify the target reader and first useful action.",
+    "Review README, docs tree, examples, and release notes for consistency.",
+    "Apply the 6-factor checklist and score the documentation.",
+    "Prioritize adoption blockers before polish.",
+    "Record validation limits honestly."
+  ]
+}

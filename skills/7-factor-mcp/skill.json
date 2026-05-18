@@ -1,0 +1,51 @@
+{
+  "name": "7-factor-mcp",
+  "version": "v0.9.0",
+  "title": "7-factor-mcp",
+  "summary": "Audit MCP servers and clients for tool boundaries, schema clarity, permissions, safety, observability, runtime behavior, and integration quality.",
+  "category": "mcp",
+  "agent_callable": true,
+  "status": "usable",
+  "recommended_trigger_phrases": [
+    "Use the 7-factor-mcp skill to review this MCP server for tool boundaries, schema clarity, permission design, safety, and integration quality."
+  ],
+  "required_files": [
+    "SKILL.md",
+    "checklist.md",
+    "scoring-rubric.md",
+    "audit-report-template.md",
+    "refactor-plan-template.md",
+    "usage-examples.md",
+    "skill.json"
+  ],
+  "expected_inputs": [
+    "MCP server code",
+    "tool schema",
+    "permission model",
+    "README",
+    "examples",
+    "logs",
+    "error cases"
+  ],
+  "expected_outputs": [
+    "MCP audit",
+    "tool boundary scorecard",
+    "permission/safety findings",
+    "MCP refactor plan"
+  ],
+  "tags": [
+    "MCP",
+    "tool schema",
+    "permissions",
+    "safety",
+    "integration"
+  ],
+  "review_protocol": [
+    "Identify project type and user-facing goal.",
+    "Inspect relevant files and infer missing context conservatively.",
+    "Apply checklist.md and scoring-rubric.md.",
+    "Produce audit-report-template.md output.",
+    "Produce a prioritized refactor-plan-template.md.",
+    "Run available validation commands or record why they could not run."
+  ]
+}

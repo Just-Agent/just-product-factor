@@ -1,0 +1,657 @@
+{
+  "name": "product-factor-skills-catalog",
+  "version": "v0.9.0",
+  "generated_at": "2026-05-18T11:05:57.312982+00:00",
+  "skill_count": 12,
+  "skills": [
+    {
+      "name": "10-factor-html",
+      "version": "v0.9.0",
+      "title": "10-factor-html",
+      "summary": "Improve HTML, landing pages, docs pages, static previews, and generated web pages for semantic structure, responsiveness, accessibility, SEO, performance, visual polish, and Agent handoff quality.",
+      "category": "html",
+      "agent_callable": true,
+      "status": "usable",
+      "recommended_trigger_phrases": [
+        "Use the 10-factor-html skill to improve this HTML page for semantic structure, responsiveness, accessibility, SEO, performance, and visual polish."
+      ],
+      "required_files": [
+        "SKILL.md",
+        "checklist.md",
+        "scoring-rubric.md",
+        "audit-report-template.md",
+        "refactor-plan-template.md",
+        "usage-examples.md",
+        "skill.json"
+      ],
+      "expected_inputs": [
+        "HTML",
+        "CSS",
+        "assets",
+        "target audience",
+        "screenshot/preview",
+        "performance constraints"
+      ],
+      "expected_outputs": [
+        "HTML audit",
+        "accessibility/SEO scorecard",
+        "refactor plan",
+        "improved page guidance"
+      ],
+      "tags": [
+        "HTML",
+        "accessibility",
+        "SEO",
+        "responsive",
+        "performance",
+        "visual polish"
+      ],
+      "review_protocol": [
+        "Identify project type and user-facing goal.",
+        "Inspect relevant files and infer missing context conservatively.",
+        "Apply checklist.md and scoring-rubric.md.",
+        "Produce audit-report-template.md output.",
+        "Produce a prioritized refactor-plan-template.md.",
+        "Run available validation commands or record why they could not run."
+      ],
+      "path": "skills/10-factor-html"
+    },
+    {
+      "name": "11-factor-cli",
+      "version": "v0.9.0",
+      "title": "11-factor-cli",
+      "summary": "Audit and refactor command-line products so they are installable, understandable, scriptable, observable, testable, and release-ready.",
+      "category": "cli",
+      "agent_callable": true,
+      "status": "draft-stable",
+      "recommended_trigger_phrases": [
+        "Use the 11-factor-cli skill to audit this CLI for installability, command UX, configuration, error handling, logging, testing, packaging, and release readiness."
+      ],
+      "required_files": [
+        "SKILL.md",
+        "checklist.md",
+        "audit-report-template.md",
+        "refactor-plan-template.md",
+        "scoring-rubric.md",
+        "usage-examples.md",
+        "skill.json"
+      ],
+      "expected_inputs": [
+        "Repository tree or zip archive",
+        "README or command documentation",
+        "CLI source files and entrypoints",
+        "package metadata such as package.json, pyproject.toml, Cargo.toml, go.mod, or setup config",
+        "Example commands, tests, workflows, and release scripts when available"
+      ],
+      "expected_outputs": [
+        "CLI audit report with evidence and score",
+        "Refactor plan ranked by user impact and release readiness",
+        "Command UX improvements with example commands",
+        "Packaging, installation, and validation recommendations",
+        "Open issues, assumptions, and next iteration suggestions"
+      ],
+      "tags": [
+        "cli",
+        "developer-experience",
+        "release-readiness",
+        "packaging",
+        "error-handling",
+        "automation"
+      ],
+      "review_protocol": [
+        "Identify the CLI runtime, entrypoint, installation path, and core commands.",
+        "Run or statically inspect help output, examples, config handling, and error messages.",
+        "Score the CLI against the 11-factor checklist.",
+        "Prioritize fixes that make the CLI installable, testable, predictable, and scriptable.",
+        "Return an audit report and concrete refactor plan."
+      ],
+      "path": "skills/11-factor-cli"
+    },
+    {
+      "name": "12-factor-agents",
+      "version": "v0.9.0",
+      "title": "12-factor-agents",
+      "summary": "Audit and refactor LLM Agent systems for reliability, context discipline, tool contracts, control flow, human-in-the-loop design, and production readiness.",
+      "category": "agent",
+      "agent_callable": true,
+      "status": "usable",
+      "recommended_trigger_phrases": [
+        "Use the 12-factor-agents skill to review this agent project.",
+        "Use the 12-factor-agents skill to refactor this project into a production-ready agent architecture."
+      ],
+      "required_files": [
+        "SKILL.md",
+        "checklist.md",
+        "scoring-rubric.md",
+        "audit-report-template.md",
+        "refactor-plan-template.md",
+        "usage-examples.md",
+        "skill.json"
+      ],
+      "expected_inputs": [
+        "README",
+        "agent runtime code",
+        "tool definitions",
+        "prompts",
+        "memory/state design",
+        "evals",
+        "logs",
+        "CI"
+      ],
+      "expected_outputs": [
+        "agent audit report",
+        "factor scorecard",
+        "refactor plan",
+        "validation plan"
+      ],
+      "tags": [
+        "Agent-native",
+        "tool calling",
+        "state",
+        "memory",
+        "eval",
+        "release readiness"
+      ],
+      "review_protocol": [
+        "Identify project type and user-facing goal.",
+        "Inspect relevant files and infer missing context conservatively.",
+        "Apply checklist.md and scoring-rubric.md.",
+        "Produce audit-report-template.md output.",
+        "Produce a prioritized refactor-plan-template.md.",
+        "Run available validation commands or record why they could not run."
+      ],
+      "path": "skills/12-factor-agents"
+    },
+    {
+      "name": "12-factor-app",
+      "version": "v0.9.0",
+      "title": "12-factor-app",
+      "summary": "Audit and refactor apps, SaaS products, APIs, services, and CLI tools for deployability, maintainability, configuration, logging, release readiness, and product polish.",
+      "category": "application",
+      "agent_callable": true,
+      "status": "usable",
+      "recommended_trigger_phrases": [
+        "Use the 12-factor-app skill to audit this app for deployability, maintainability, configuration, logging, and release readiness."
+      ],
+      "required_files": [
+        "SKILL.md",
+        "checklist.md",
+        "scoring-rubric.md",
+        "audit-report-template.md",
+        "refactor-plan-template.md",
+        "usage-examples.md",
+        "skill.json"
+      ],
+      "expected_inputs": [
+        "README",
+        "package/project config",
+        "source code",
+        "environment config",
+        "deployment config",
+        "tests",
+        "logs"
+      ],
+      "expected_outputs": [
+        "app readiness audit",
+        "deployability scorecard",
+        "release checklist",
+        "refactor plan"
+      ],
+      "tags": [
+        "deployability",
+        "maintainability",
+        "configuration",
+        "logging",
+        "release readiness"
+      ],
+      "review_protocol": [
+        "Identify project type and user-facing goal.",
+        "Inspect relevant files and infer missing context conservatively.",
+        "Apply checklist.md and scoring-rubric.md.",
+        "Produce audit-report-template.md output.",
+        "Produce a prioritized refactor-plan-template.md.",
+        "Run available validation commands or record why they could not run."
+      ],
+      "path": "skills/12-factor-app"
+    },
+    {
+      "name": "13-factor-product-readiness",
+      "version": "v0.9.0",
+      "title": "13-factor-product-readiness",
+      "summary": "Audit and refactor repositories for product positioning, onboarding, examples, validation, release readiness, GitHub polish, Agent-native usage, and launch quality.",
+      "category": "product-readiness",
+      "agent_callable": true,
+      "status": "draft-stable",
+      "recommended_trigger_phrases": [
+        "Use the 13-factor-product-readiness skill to audit this repository for launch readiness, onboarding, product polish, release discipline, and open-source credibility.",
+        "Use the 13-factor-product-readiness skill to turn this demo repository into a publishable product-quality open-source project."
+      ],
+      "required_files": [
+        "SKILL.md",
+        "checklist.md",
+        "audit-report-template.md",
+        "refactor-plan-template.md",
+        "scoring-rubric.md",
+        "usage-examples.md",
+        "skill.json"
+      ],
+      "expected_inputs": [
+        "Repository tree or zip archive",
+        "README",
+        "docs and examples",
+        "package metadata",
+        "tests and workflows",
+        "changelog and release notes",
+        "roadmap and contribution guidance"
+      ],
+      "expected_outputs": [
+        "product readiness audit report",
+        "13-factor scorecard",
+        "launch blocker list",
+        "product polish refactor plan",
+        "paired Skill recommendation",
+        "validation summary"
+      ],
+      "tags": [
+        "product-readiness",
+        "open-source",
+        "launch-readiness",
+        "onboarding",
+        "release-readiness",
+        "Agent-native"
+      ],
+      "review_protocol": [
+        "Identify target user, product promise, and primary use case.",
+        "Review first 30 seconds and first 5 minutes of onboarding.",
+        "Apply the 13-factor checklist and score the repository.",
+        "Prioritize launch blockers before polish.",
+        "Recommend paired technical Factor Skills for follow-up."
+      ],
+      "path": "skills/13-factor-product-readiness"
+    },
+    {
+      "name": "14-factor-security-privacy",
+      "version": "v0.9.0",
+      "title": "14-factor-security-privacy",
+      "summary": "Audit repositories for secrets, permissions, data handling, dependency hygiene, CI/CD safety, Agent/tool boundaries, privacy posture, and release blockers.",
+      "category": "security-privacy",
+      "agent_callable": true,
+      "status": "draft-stable",
+      "recommended_trigger_phrases": [
+        "Use the 14-factor-security-privacy skill to audit this repository for secrets, permissions, data handling, dependency hygiene, CI/CD safety, and release blockers.",
+        "Use the 14-factor-security-privacy skill after 12-factor-agents to review tool permissions, prompt injection risk, destructive actions, secrets, and log safety.",
+        "Use the 14-factor-security-privacy skill with 8-factor-github-actions to check workflow permissions, secrets exposure, release artifact safety, and deployment approval gates."
+      ],
+      "required_files": [
+        "SKILL.md",
+        "checklist.md",
+        "audit-report-template.md",
+        "refactor-plan-template.md",
+        "scoring-rubric.md",
+        "usage-examples.md",
+        "skill.json"
+      ],
+      "expected_inputs": [
+        "repository tree or zip archive",
+        "README and release notes",
+        "configuration and environment variable docs",
+        "CI/CD workflows",
+        "package manifests and lockfiles",
+        "tool schemas and integration docs",
+        "logs, examples, and sample data"
+      ],
+      "expected_outputs": [
+        "security/privacy audit report",
+        "14-factor scorecard",
+        "trust boundary map",
+        "critical blocker list",
+        "mitigation refactor plan",
+        "validation summary",
+        "paired Skill recommendation"
+      ],
+      "tags": [
+        "security",
+        "privacy",
+        "secrets",
+        "permissions",
+        "ci-cd",
+        "supply-chain",
+        "release-readiness",
+        "Agent-native"
+      ],
+      "review_protocol": [
+        "Identify data, credentials, tools, integrations, workflows, and release context.",
+        "Map trust boundaries and high-risk operations.",
+        "Review secret hygiene, configuration, permissions, logs, dependencies, and CI/CD.",
+        "Apply the 14-factor checklist and scoring rubric.",
+        "Prioritize critical blockers before polish.",
+        "Record validation evidence and limits honestly."
+      ],
+      "path": "skills/14-factor-security-privacy"
+    },
+    {
+      "name": "15-factor-observability",
+      "version": "v0.9.0",
+      "title": "15-factor-observability",
+      "summary": "Audit runtime visibility, structured logs, metrics, traces, validation artifacts, failure diagnostics, release evidence, privacy-safe debugging, and Agent handoff readiness.",
+      "category": "observability",
+      "agent_callable": true,
+      "status": "draft-stable",
+      "recommended_trigger_phrases": [
+        "Use the 15-factor-observability skill to audit this Agent project for logs, traces, tool-call evidence, validation artifacts, and debuggability.",
+        "Use the 15-factor-observability skill with 14-factor-security-privacy to make this app easier to debug without leaking secrets or user data.",
+        "Use the 15-factor-observability skill with 8-factor-github-actions to improve workflow summaries, failure logs, release artifacts, and deployment diagnostics."
+      ],
+      "required_files": [
+        "SKILL.md",
+        "checklist.md",
+        "audit-report-template.md",
+        "refactor-plan-template.md",
+        "scoring-rubric.md",
+        "usage-examples.md",
+        "skill.json"
+      ],
+      "expected_inputs": [
+        "repository tree or zip archive",
+        "README, quickstart, docs, examples, and troubleshooting notes",
+        "source files, run entrypoints, CLI commands, workflows, and tests",
+        "logs, traces, validation outputs, audit artifacts, and failure reports",
+        "Agent traces, tool-call records, RAG retrieval logs, or MCP invocation records when available"
+      ],
+      "expected_outputs": [
+        "observability audit report",
+        "15-factor scorecard",
+        "runtime map",
+        "critical blind spot list",
+        "logs/metrics/traces/artifacts recommendations",
+        "privacy-safe debugging notes",
+        "observability refactor plan",
+        "validation plan and paired Skill recommendation"
+      ],
+      "tags": [
+        "observability",
+        "logging",
+        "metrics",
+        "tracing",
+        "debugging",
+        "validation-artifacts",
+        "Agent-native",
+        "release-readiness"
+      ],
+      "review_protocol": [
+        "Map the system's key run paths, dependencies, and failure points.",
+        "Review logs, errors, metrics, traces, artifacts, issue templates, and release evidence.",
+        "Check whether debugging data is useful while remaining privacy-safe.",
+        "Apply the 15-factor checklist and scoring rubric.",
+        "Produce an observability audit report and prioritized refactor plan.",
+        "Recommend paired Skills when observability issues overlap with security, Agent, RAG, MCP, GitHub Actions, CLI, docs, or product readiness."
+      ],
+      "path": "skills/15-factor-observability"
+    },
+    {
+      "name": "5-factor-evals",
+      "version": "v0.9.0",
+      "title": "5-factor-evals",
+      "summary": "Audit evaluation, regression testing, benchmark, golden-case, failure taxonomy, and release gate systems for Agent-native product projects.",
+      "category": "evaluation",
+      "agent_callable": true,
+      "status": "draft-stable",
+      "recommended_trigger_phrases": [
+        "Use the 5-factor-evals skill to audit this Agent project for golden cases, regression tests, failure taxonomy, and release gates.",
+        "Use the 5-factor-evals skill to add a repeatable evaluation plan before we refactor this RAG pipeline.",
+        "Use the 5-factor-evals skill as a secondary review after 12-factor-agents and 9-factor-rag."
+      ],
+      "required_files": [
+        "SKILL.md",
+        "checklist.md",
+        "audit-report-template.md",
+        "refactor-plan-template.md",
+        "scoring-rubric.md",
+        "usage-examples.md",
+        "skill.json"
+      ],
+      "expected_inputs": [
+        "target project files",
+        "existing tests and examples",
+        "logs or previous evaluation notes",
+        "product goals and acceptance criteria",
+        "release or refactor context"
+      ],
+      "expected_outputs": [
+        "evaluation audit report",
+        "5-factor eval scorecard",
+        "minimum useful eval harness plan",
+        "golden case list",
+        "failure taxonomy",
+        "release gate recommendations",
+        "validation summary"
+      ],
+      "tags": [
+        "evaluation",
+        "regression",
+        "golden-cases",
+        "benchmarks",
+        "release-readiness",
+        "Agent-native"
+      ],
+      "review_protocol": [
+        "Identify the product behavior that must stay reliable.",
+        "Review tests, examples, fixtures, logs, CI, and release notes.",
+        "Apply the 5-factor checklist and scoring rubric.",
+        "Recommend a minimum useful evaluation harness before larger refactors.",
+        "Record validation results and validation limits honestly."
+      ],
+      "path": "skills/5-factor-evals"
+    },
+    {
+      "name": "6-factor-docs",
+      "version": "v0.9.0",
+      "title": "6-factor-docs",
+      "summary": "Audit and refactor documentation systems for positioning, first-run onboarding, information architecture, examples, accuracy, maintenance, and Agent handoff readiness.",
+      "category": "documentation",
+      "agent_callable": true,
+      "status": "draft-stable",
+      "recommended_trigger_phrases": [
+        "Use the 6-factor-docs skill to audit this repository documentation for positioning, onboarding, information architecture, examples, accuracy, maintenance, and Agent handoff readiness.",
+        "Use the 6-factor-docs skill to refactor this project's README, guides, examples, and release notes so a new user can complete the first useful action in under five minutes."
+      ],
+      "required_files": [
+        "SKILL.md",
+        "checklist.md",
+        "audit-report-template.md",
+        "refactor-plan-template.md",
+        "scoring-rubric.md",
+        "usage-examples.md",
+        "skill.json"
+      ],
+      "expected_inputs": [
+        "README and docs tree",
+        "examples, recipes, and tutorials",
+        "package metadata and CLI help if docs reference commands",
+        "changelog, release notes, and roadmap",
+        "known onboarding friction or user questions"
+      ],
+      "expected_outputs": [
+        "documentation audit report",
+        "6-factor docs scorecard",
+        "reader journey diagnosis",
+        "documentation refactor plan",
+        "Agent handoff readiness review",
+        "validation summary"
+      ],
+      "tags": [
+        "documentation",
+        "README",
+        "onboarding",
+        "examples",
+        "Agent-native",
+        "release-readiness"
+      ],
+      "review_protocol": [
+        "Identify the target reader and first useful action.",
+        "Review README, docs tree, examples, and release notes for consistency.",
+        "Apply the 6-factor checklist and score the documentation.",
+        "Prioritize adoption blockers before polish.",
+        "Record validation limits honestly."
+      ],
+      "path": "skills/6-factor-docs"
+    },
+    {
+      "name": "7-factor-mcp",
+      "version": "v0.9.0",
+      "title": "7-factor-mcp",
+      "summary": "Audit MCP servers and clients for tool boundaries, schema clarity, permissions, safety, observability, runtime behavior, and integration quality.",
+      "category": "mcp",
+      "agent_callable": true,
+      "status": "usable",
+      "recommended_trigger_phrases": [
+        "Use the 7-factor-mcp skill to review this MCP server for tool boundaries, schema clarity, permission design, safety, and integration quality."
+      ],
+      "required_files": [
+        "SKILL.md",
+        "checklist.md",
+        "scoring-rubric.md",
+        "audit-report-template.md",
+        "refactor-plan-template.md",
+        "usage-examples.md",
+        "skill.json"
+      ],
+      "expected_inputs": [
+        "MCP server code",
+        "tool schema",
+        "permission model",
+        "README",
+        "examples",
+        "logs",
+        "error cases"
+      ],
+      "expected_outputs": [
+        "MCP audit",
+        "tool boundary scorecard",
+        "permission/safety findings",
+        "MCP refactor plan"
+      ],
+      "tags": [
+        "MCP",
+        "tool schema",
+        "permissions",
+        "safety",
+        "integration"
+      ],
+      "review_protocol": [
+        "Identify project type and user-facing goal.",
+        "Inspect relevant files and infer missing context conservatively.",
+        "Apply checklist.md and scoring-rubric.md.",
+        "Produce audit-report-template.md output.",
+        "Produce a prioritized refactor-plan-template.md.",
+        "Run available validation commands or record why they could not run."
+      ],
+      "path": "skills/7-factor-mcp"
+    },
+    {
+      "name": "8-factor-github-actions",
+      "version": "v0.9.0",
+      "title": "8-factor-github-actions",
+      "summary": "Audit GitHub Actions workflows for CI/CD reliability, permissions, caching, release automation, deployment safety, secrets handling, and reusable automation design.",
+      "category": "automation",
+      "agent_callable": true,
+      "status": "usable",
+      "recommended_trigger_phrases": [
+        "Use the 8-factor-github-actions skill to review this workflow for CI/CD reliability, permissions, caching, release automation, and deployment safety."
+      ],
+      "required_files": [
+        "SKILL.md",
+        "checklist.md",
+        "scoring-rubric.md",
+        "audit-report-template.md",
+        "refactor-plan-template.md",
+        "usage-examples.md",
+        "skill.json"
+      ],
+      "expected_inputs": [
+        ".github/workflows",
+        "README",
+        "release process",
+        "secrets policy",
+        "deployment target",
+        "test commands"
+      ],
+      "expected_outputs": [
+        "workflow audit",
+        "CI/CD reliability scorecard",
+        "security findings",
+        "workflow refactor plan"
+      ],
+      "tags": [
+        "GitHub Actions",
+        "CI/CD",
+        "permissions",
+        "caching",
+        "deployment",
+        "release automation"
+      ],
+      "review_protocol": [
+        "Identify project type and user-facing goal.",
+        "Inspect relevant files and infer missing context conservatively.",
+        "Apply checklist.md and scoring-rubric.md.",
+        "Produce audit-report-template.md output.",
+        "Produce a prioritized refactor-plan-template.md.",
+        "Run available validation commands or record why they could not run."
+      ],
+      "path": "skills/8-factor-github-actions"
+    },
+    {
+      "name": "9-factor-rag",
+      "version": "v0.9.0",
+      "title": "9-factor-rag",
+      "summary": "Audit RAG systems for retrieval quality, chunking, indexing, citation, context control, evaluation, freshness, and answer trustworthiness.",
+      "category": "rag",
+      "agent_callable": true,
+      "status": "usable",
+      "recommended_trigger_phrases": [
+        "Use the 9-factor-rag skill to audit this RAG project for retrieval quality, chunking, indexing, citation, context control, and evaluation."
+      ],
+      "required_files": [
+        "SKILL.md",
+        "checklist.md",
+        "scoring-rubric.md",
+        "audit-report-template.md",
+        "refactor-plan-template.md",
+        "usage-examples.md",
+        "skill.json"
+      ],
+      "expected_inputs": [
+        "retrieval code",
+        "chunking logic",
+        "index config",
+        "prompt templates",
+        "citation policy",
+        "eval set",
+        "sample answers"
+      ],
+      "expected_outputs": [
+        "RAG audit",
+        "retrieval scorecard",
+        "citation/freshness findings",
+        "RAG refactor plan"
+      ],
+      "tags": [
+        "RAG",
+        "retrieval",
+        "chunking",
+        "indexing",
+        "citation",
+        "evaluation"
+      ],
+      "review_protocol": [
+        "Identify project type and user-facing goal.",
+        "Inspect relevant files and infer missing context conservatively.",
+        "Apply checklist.md and scoring-rubric.md.",
+        "Produce audit-report-template.md output.",
+        "Produce a prioritized refactor-plan-template.md.",
+        "Run available validation commands or record why they could not run."
+      ],
+      "path": "skills/9-factor-rag"
+    }
+  ]
+}

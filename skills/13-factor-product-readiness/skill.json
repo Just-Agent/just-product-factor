@@ -1,0 +1,54 @@
+{
+  "name": "13-factor-product-readiness",
+  "version": "v0.9.0",
+  "title": "13-factor-product-readiness",
+  "summary": "Audit and refactor repositories for product positioning, onboarding, examples, validation, release readiness, GitHub polish, Agent-native usage, and launch quality.",
+  "category": "product-readiness",
+  "agent_callable": true,
+  "status": "draft-stable",
+  "recommended_trigger_phrases": [
+    "Use the 13-factor-product-readiness skill to audit this repository for launch readiness, onboarding, product polish, release discipline, and open-source credibility.",
+    "Use the 13-factor-product-readiness skill to turn this demo repository into a publishable product-quality open-source project."
+  ],
+  "required_files": [
+    "SKILL.md",
+    "checklist.md",
+    "audit-report-template.md",
+    "refactor-plan-template.md",
+    "scoring-rubric.md",
+    "usage-examples.md",
+    "skill.json"
+  ],
+  "expected_inputs": [
+    "Repository tree or zip archive",
+    "README",
+    "docs and examples",
+    "package metadata",
+    "tests and workflows",
+    "changelog and release notes",
+    "roadmap and contribution guidance"
+  ],
+  "expected_outputs": [
+    "product readiness audit report",
+    "13-factor scorecard",
+    "launch blocker list",
+    "product polish refactor plan",
+    "paired Skill recommendation",
+    "validation summary"
+  ],
+  "tags": [
+    "product-readiness",
+    "open-source",
+    "launch-readiness",
+    "onboarding",
+    "release-readiness",
+    "Agent-native"
+  ],
+  "review_protocol": [
+    "Identify target user, product promise, and primary use case.",
+    "Review first 30 seconds and first 5 minutes of onboarding.",
+    "Apply the 13-factor checklist and score the repository.",
+    "Prioritize launch blockers before polish.",
+    "Recommend paired technical Factor Skills for follow-up."
+  ]
+}

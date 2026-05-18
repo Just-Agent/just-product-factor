@@ -1,0 +1,51 @@
+{
+  "name": "12-factor-app",
+  "version": "v0.9.0",
+  "title": "12-factor-app",
+  "summary": "Audit and refactor apps, SaaS products, APIs, services, and CLI tools for deployability, maintainability, configuration, logging, release readiness, and product polish.",
+  "category": "application",
+  "agent_callable": true,
+  "status": "usable",
+  "recommended_trigger_phrases": [
+    "Use the 12-factor-app skill to audit this app for deployability, maintainability, configuration, logging, and release readiness."
+  ],
+  "required_files": [
+    "SKILL.md",
+    "checklist.md",
+    "scoring-rubric.md",
+    "audit-report-template.md",
+    "refactor-plan-template.md",
+    "usage-examples.md",
+    "skill.json"
+  ],
+  "expected_inputs": [
+    "README",
+    "package/project config",
+    "source code",
+    "environment config",
+    "deployment config",
+    "tests",
+    "logs"
+  ],
+  "expected_outputs": [
+    "app readiness audit",
+    "deployability scorecard",
+    "release checklist",
+    "refactor plan"
+  ],
+  "tags": [
+    "deployability",
+    "maintainability",
+    "configuration",
+    "logging",
+    "release readiness"
+  ],
+  "review_protocol": [
+    "Identify project type and user-facing goal.",
+    "Inspect relevant files and infer missing context conservatively.",
+    "Apply checklist.md and scoring-rubric.md.",
+    "Produce audit-report-template.md output.",
+    "Produce a prioritized refactor-plan-template.md.",
+    "Run available validation commands or record why they could not run."
+  ]
+}

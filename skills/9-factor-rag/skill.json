@@ -1,0 +1,52 @@
+{
+  "name": "9-factor-rag",
+  "version": "v0.9.0",
+  "title": "9-factor-rag",
+  "summary": "Audit RAG systems for retrieval quality, chunking, indexing, citation, context control, evaluation, freshness, and answer trustworthiness.",
+  "category": "rag",
+  "agent_callable": true,
+  "status": "usable",
+  "recommended_trigger_phrases": [
+    "Use the 9-factor-rag skill to audit this RAG project for retrieval quality, chunking, indexing, citation, context control, and evaluation."
+  ],
+  "required_files": [
+    "SKILL.md",
+    "checklist.md",
+    "scoring-rubric.md",
+    "audit-report-template.md",
+    "refactor-plan-template.md",
+    "usage-examples.md",
+    "skill.json"
+  ],
+  "expected_inputs": [
+    "retrieval code",
+    "chunking logic",
+    "index config",
+    "prompt templates",
+    "citation policy",
+    "eval set",
+    "sample answers"
+  ],
+  "expected_outputs": [
+    "RAG audit",
+    "retrieval scorecard",
+    "citation/freshness findings",
+    "RAG refactor plan"
+  ],
+  "tags": [
+    "RAG",
+    "retrieval",
+    "chunking",
+    "indexing",
+    "citation",
+    "evaluation"
+  ],
+  "review_protocol": [
+    "Identify project type and user-facing goal.",
+    "Inspect relevant files and infer missing context conservatively.",
+    "Apply checklist.md and scoring-rubric.md.",
+    "Produce audit-report-template.md output.",
+    "Produce a prioritized refactor-plan-template.md.",
+    "Run available validation commands or record why they could not run."
+  ]
+}
