@@ -1,181 +1,56 @@
-# just-product-factor
+<div align="center">
+  <h1>just-product-factor</h1>
+  <p><strong>Turn engineering standards into reusable Agent Skills for repeatable product audits, refactors, and release checks.</strong></p>
+  <p><strong>把优秀工程标准，变成 Agent 可以反复调用的产品优化技能。</strong></p>
+  <p>
+    <a href="https://github.com/Just-Agent/just-product-factor/actions/workflows/validate.yml"><img src="https://github.com/Just-Agent/just-product-factor/actions/workflows/validate.yml/badge.svg" alt="Validate Factor Skills" /></a>
+    <a href="https://github.com/Just-Agent/just-product-factor/releases/tag/v0.9.0"><img src="https://img.shields.io/github/v/release/Just-Agent/just-product-factor?label=release" alt="Release" /></a>
+    <a href="./LICENSE"><img src="https://img.shields.io/github/license/Just-Agent/just-product-factor" alt="License" /></a>
+    <img src="https://img.shields.io/badge/skills-12-2563EB" alt="12 bundled skills" />
+    <img src="https://img.shields.io/badge/python-standard%20library-10A37F" alt="Python standard library" />
+  </p>
+  <p>
+    <a href="./docs/generated-skill-catalog.md">Skill Catalog</a>
+    |
+    <a href="./docs/agent-invocation-protocol.md">Agent Protocol</a>
+    |
+    <a href="./docs/multi-skill-composition-guide.md">Composition Guide</a>
+    |
+    <a href="./RELEASE_NOTES.md">Release Notes</a>
+  </p>
+</div>
 
-**Reusable Factor Skills for Agent-native product optimization.**
+`just-product-factor` is the public repository for the `product-factor-skills` pack: a lightweight, dependency-free collection of Agent-callable standards for improving Agent systems, apps, CLIs, RAG pipelines, MCP servers, GitHub Actions, documentation, security posture, observability, and product readiness.
 
-中文定位：**把优秀工程标准，变成 Agent 可以反复调用的产品优化技能。**
-
-Public repository name: `just-product-factor`. Package and catalog name: `product-factor-skills`.
-
-`product-factor-skills` is a multi-skill standard repository. It packages engineering factor standards into reusable Agent Skills for repeatable product audit, project refactor, release readiness, deployability, maintainability, and continuous optimization.
-
-`product-factor-skills` 是一个多 Skill 标准仓库，用于把工程方法论包装成可复用的 Agent Skill，帮助 Agent 在优化 Agent、App、HTML、GitHub Actions、RAG、MCP 等产品工程项目时，执行标准化审查、评分、重构和升级。
-
-> Current version: `v0.9.0`
->
-> This repository does **not** require heavy monorepo tooling. It uses a simple multi-skill standard repository structure. If future versions add packages, CLIs, runners, or independent releases, it can evolve into a real monorepo.
-
----
-
-## Why this exists
-
-很多工程标准本身是文档、方法论或最佳实践，但 Agent 真正需要的是可执行的工作单元：
-
-- 什么时候调用这个标准？
-- 输入什么？
-- 检查哪些文件？
-- 怎么评分？
-- 怎么输出审查报告？
-- 怎么生成重构计划？
-- 怎么持续迭代？
-
-This project turns standards into repeatable skills.
+It is not a heavy framework. It is a practical review system that turns a method into a repeatable working unit:
 
 ```text
-engineering method / factor standard
+engineering standard
   -> Agent-callable Skill
   -> checklist
   -> scoring rubric
-  -> audit report template
-  -> refactor plan template
-  -> validation protocol
-  -> repeatable optimization loop
+  -> audit report
+  -> refactor plan
+  -> validation evidence
 ```
 
----
+## 30-Second Start
 
-## Included Skills
-
-| Skill | Purpose | Use it when |
-|---|---|---|
-| `12-factor-agents` | Audit and refactor LLM Agent systems | You are building Agent workflows, tool calls, memory, control flow, or human-in-the-loop systems |
-| `12-factor-app` | Audit deployability and product engineering quality | You are building SaaS, APIs, full-stack apps, services, or CLI products |
-| `10-factor-html` | Improve HTML pages and web previews | You need semantic HTML, responsive UI, accessibility, SEO, performance, and visual polish |
-| `8-factor-github-actions` | Improve CI/CD workflows | You need safe, maintainable, reusable GitHub Actions automation |
-| `9-factor-rag` | Improve retrieval-augmented generation systems | You need better chunking, indexing, retrieval, citations, evaluation, and context control |
-| `7-factor-mcp` | Improve MCP tools and servers | You need clearer tool boundaries, schema design, permissions, and runtime safety |
-| `11-factor-cli` | Improve command-line products | You need installability, command UX, help output, error handling, scriptable output, packaging, and release readiness |
-| `13-factor-product-readiness` | Improve launch readiness and product polish | You need stronger positioning, onboarding, examples, release discipline, open-source credibility, and repeat-use value |
-| `6-factor-docs` | Improve documentation systems | You need stronger README, quickstart, docs navigation, examples, accuracy, maintenance, and Agent handoff prompts |
-| `5-factor-evals` | Improve evaluation and regression confidence | You need golden cases, smoke tests, failure taxonomy, benchmarks, and release gates |
-| `14-factor-security-privacy` | Improve security and privacy readiness | You need secrets hygiene, permission boundaries, data handling, dependency hygiene, CI/CD safety, and release blockers |
-| `15-factor-observability` | Improve runtime visibility and debugging | You need better logs, metrics, traces, validation artifacts, failure diagnostics, and Agent handoff evidence |
-
-Each Skill includes a machine-readable `skill.json` manifest so an Agent can identify trigger phrases, expected inputs, expected outputs, required files, and the review protocol before reading the full markdown pack.
-
-## Security, privacy, and observability readiness
-
-`14-factor-security-privacy` adds a release-safety pass for projects that touch secrets, credentials, user data, workflows, integrations, Agent tools, MCP servers, RAG sources, or deployment automation. Use it before public release or hosted deployment, and pair it with the domain Skill when mitigation requires technical changes.
-
-`15-factor-observability` adds a runtime visibility pass for projects that need clearer logs, metrics, traces, validation artifacts, failure diagnostics, CI/release summaries, and Agent handoff evidence. Pair it with `14-factor-security-privacy` when debugging data could expose secrets, prompts, tokens, or user data.
-
-
----
-
-## Core calls
-
-```text
-Use the 12-factor-agents skill to review this agent project.
-
-Use the 12-factor-agents skill to refactor this project into a production-ready agent architecture.
-
-Use the 12-factor-app skill to audit this app for deployability, maintainability, configuration, logging, and release readiness.
-
-Use the 10-factor-html skill to improve this HTML page for semantic structure, responsiveness, accessibility, SEO, performance, and visual polish.
-
-Use the 8-factor-github-actions skill to review this workflow for CI/CD reliability, permissions, caching, release automation, and deployment safety.
-
-Use the 9-factor-rag skill to audit this RAG project for retrieval quality, chunking, indexing, citation, context control, and evaluation.
-
-Use the 7-factor-mcp skill to review this MCP server for tool boundaries, schema clarity, permission design, safety, and integration quality.
-
-Use the 11-factor-cli skill to audit this CLI for installability, command UX, configuration, error handling, logging, testing, packaging, and release readiness.
-
-Use the 13-factor-product-readiness skill to audit this repository for launch readiness, onboarding, product polish, release discipline, and open-source credibility.
-
-Use the 6-factor-docs skill to audit this repository documentation for positioning, onboarding, information architecture, examples, accuracy, maintenance, and Agent handoff readiness.
-
-Use the 5-factor-evals skill to audit this Agent project for golden cases, regression tests, failure taxonomy, and release gates.
-
-Use the 14-factor-security-privacy skill to audit this repository for secrets, permissions, data handling, dependency hygiene, CI/CD safety, and release blockers.
-
-Use the 15-factor-observability skill to audit this Agent project for logs, traces, tool-call evidence, validation artifacts, and debuggability.
-
-Use product-factor-skills to compose a multi-Skill review for this repository.
-
-Use the skill-factory template to create a new xx-factor-* skill.
-```
-
----
-
-## Repository structure
-
-```text
-product-factor-skills/
-  README.md
-  SKILL.md
-  VERSION
-  CHANGELOG.md
-  RELEASE_NOTES.md
-  product-factor-skills.json
-  skills.json
-  schemas/
-    skill-manifest.schema.json
-  skills/
-    12-factor-agents/
-      SKILL.md
-      skill.json
-      checklist.md
-      scoring-rubric.md
-      audit-report-template.md
-      refactor-plan-template.md
-      usage-examples.md
-    12-factor-app/
-    10-factor-html/
-    8-factor-github-actions/
-    9-factor-rag/
-    7-factor-mcp/
-    11-factor-cli/
-    13-factor-product-readiness/
-    6-factor-docs/
-    5-factor-evals/
-    14-factor-security-privacy/
-    15-factor-observability/
-  checklists/
-  templates/
-  examples/
-  guides/
-  scripts/
-  skill-factory/
-  docs/
-  logs/
-  .github/workflows/
-```
-
----
-
-## Agent invocation protocol
-
-1. Select the closest Skill under `skills/`.
-2. Read `skills/<skill>/skill.json` first.
-3. Read `SKILL.md` for scope and workflow.
-4. Apply `checklist.md` and `scoring-rubric.md`.
-5. Produce an audit report with `audit-report-template.md`.
-6. Produce a refactor plan with `refactor-plan-template.md`.
-7. Run validation if possible; otherwise record limits honestly.
-
-See `docs/agent-invocation-protocol.md` for the full protocol. Use `docs/skill-routing-guide.md` to choose the right Skill, `docs/output-contract.md` to keep reports consistent, and `docs/multi-skill-composition-guide.md` when a project needs several Skills in one plan.
-
----
-
-## Skill Factory
-
-Create a new Skill skeleton:
+Clone the repository and ask the selector which Skill should lead a review:
 
 ```bash
-python scripts/generate_factor_skill.py xx-factor-cli --title "xx-factor-cli" --category cli
+git clone https://github.com/Just-Agent/just-product-factor.git
+cd just-product-factor
+python scripts/select_factor_skill.py "prepare this Agent product for public release with security and observability" --root . --top 4
 ```
 
-Validate the repository:
+Generate a multi-Skill review plan:
+
+```bash
+python scripts/compose_factor_review.py "prepare this Agent product for public release with security and observability" --root . --target ./examples/sample-agent-project --max-skills 4 --out ./tmp/composed-review
+```
+
+Validate the Skill pack:
 
 ```bash
 python scripts/scan_factor_project.py .
@@ -187,116 +62,165 @@ Expected result:
 PASS: product-factor-skills validation passed
 ```
 
+## What You Get
 
+| Capability | What it gives an Agent | Evidence in this repo |
+|---|---|---|
+| Skill selection | Pick the best review lens from a broad request | [`scripts/select_factor_skill.py`](./scripts/select_factor_skill.py) |
+| Structured audits | Produce consistent reports and scorecards | [`templates/`](./templates) and [`skills/*/audit-report-template.md`](./skills) |
+| Refactor planning | Convert findings into prioritized work | [`skills/*/refactor-plan-template.md`](./skills) |
+| Multi-Skill reviews | Combine product, security, observability, and domain checks | [`scripts/compose_factor_review.py`](./scripts/compose_factor_review.py) |
+| Prompt handoff | Render a full Skill pack into one copyable Agent prompt | [`scripts/render_skill_prompt.py`](./scripts/render_skill_prompt.py) |
+| Release validation | Check structure, manifests, examples, and release artifacts | [`scripts/scan_factor_project.py`](./scripts/scan_factor_project.py) |
 
-## Skill selector
+## Skill Map
 
-When the request is broad, use the lightweight selector to recommend a primary Skill and useful secondary Skills:
+| Area | Skill | Use it when |
+|---|---|---|
+| Agent systems | [`12-factor-agents`](./skills/12-factor-agents) | You are reviewing tools, prompts, memory, control flow, or human approval loops |
+| App engineering | [`12-factor-app`](./skills/12-factor-app) | You need deployability, configuration, service design, and product engineering quality |
+| Static web output | [`10-factor-html`](./skills/10-factor-html) | You need semantic HTML, responsive UI, accessibility, SEO, performance, or visual polish |
+| CI/CD | [`8-factor-github-actions`](./skills/8-factor-github-actions) | You need safer, clearer, reusable GitHub Actions workflows |
+| RAG | [`9-factor-rag`](./skills/9-factor-rag) | You need retrieval quality, chunking, indexing, citations, freshness, and evals |
+| MCP | [`7-factor-mcp`](./skills/7-factor-mcp) | You need tool boundaries, schema clarity, permission design, and runtime safety |
+| CLI products | [`11-factor-cli`](./skills/11-factor-cli) | You need installability, command UX, help output, scriptable output, and release readiness |
+| Product launch | [`13-factor-product-readiness`](./skills/13-factor-product-readiness) | You need positioning, onboarding, examples, release discipline, and GitHub polish |
+| Documentation | [`6-factor-docs`](./skills/6-factor-docs) | You need stronger README, guides, examples, accuracy, and Agent handoff prompts |
+| Evaluation | [`5-factor-evals`](./skills/5-factor-evals) | You need golden cases, regression tests, failure taxonomy, benchmarks, and release gates |
+| Security and privacy | [`14-factor-security-privacy`](./skills/14-factor-security-privacy) | You need secrets hygiene, permissions, data handling, dependency hygiene, and release blockers |
+| Observability | [`15-factor-observability`](./skills/15-factor-observability) | You need logs, traces, metrics, validation artifacts, failure diagnostics, and handoff evidence |
 
-```bash
-python scripts/select_factor_skill.py "audit this RAG app for retrieval quality and regression tests" --root . --top 5
+## How Agents Use It
+
+```mermaid
+flowchart LR
+  A["User request or target repo"] --> B["Select a Factor Skill"]
+  B --> C["Read skill.json"]
+  C --> D["Read SKILL.md"]
+  D --> E["Apply checklist and scoring rubric"]
+  E --> F["Write audit report"]
+  F --> G["Write refactor plan"]
+  G --> H["Run validation or record limits"]
 ```
 
-With a target project path:
+The full protocol is in [`docs/agent-invocation-protocol.md`](./docs/agent-invocation-protocol.md). For broader projects, use [`docs/multi-skill-routing-matrix.md`](./docs/multi-skill-routing-matrix.md) and [`docs/multi-skill-composition-guide.md`](./docs/multi-skill-composition-guide.md).
 
-```bash
-python scripts/select_factor_skill.py "prepare this repo for release" --root . --target ./examples/sample-agent-project --json ./tmp/skill-selection.json --markdown ./tmp/skill-selection.md
-```
+## Core Commands
 
-See `docs/skill-selection-engine.md` and `examples/skill-selection-prompt.md`.
+| Task | Command |
+|---|---|
+| Validate repository structure | `python scripts/scan_factor_project.py .` |
+| Select a Skill | `python scripts/select_factor_skill.py "audit this RAG app for retrieval quality and regression tests" --root . --top 5` |
+| Compose a review plan | `python scripts/compose_factor_review.py "prepare this Agent product for release" --root . --target ./examples/sample-agent-project --max-skills 4 --out ./tmp/composed-review` |
+| Generate an audit workspace | `python scripts/run_skill_audit.py --repo . --target ./examples/sample-agent-project --skill 12-factor-agents --out ./tmp/agent-audit` |
+| Render a one-shot prompt | `python scripts/render_skill_prompt.py 13-factor-product-readiness --target ./my-repo --out ./tmp/product-readiness-prompt.md` |
+| Export the Skill catalog | `python scripts/export_skill_catalog.py . --markdown docs/generated-skill-catalog.md --json docs/generated-skill-catalog.json` |
+| Create a new Skill skeleton | `python scripts/generate_factor_skill.py xx-factor-example --title "xx-factor-example" --category example` |
+| Build a release zip | `python scripts/build_release_zip.py . --out ../product-factor-skills-$(cat VERSION).zip` |
 
----
-
-## Multi-Skill composer
-
-When one project needs several review lenses, generate a composed review plan:
-
-```bash
-python scripts/compose_factor_review.py "prepare this Agent product for public release with security and observability" --root . --target ./examples/sample-agent-project --max-skills 4 --out ./tmp/composed-review
-```
-
-This creates `review-plan.md`, `review-plan.json`, and `handoff-prompt.md`. See `docs/multi-skill-composition-guide.md`.
-
----
-
-## Audit runner
-
-Prepare a repeatable audit package for a target project:
-
-```bash
-python scripts/run_skill_audit.py   --repo .   --target ./examples/sample-agent-project   --skill 12-factor-agents   --out ./tmp/agent-audit
-```
-
-This generates `audit-brief.md`, `audit-report.md`, `refactor-plan.md`, `validation-summary.md`, `decision-log.md`, and `audit-summary.json`. See `docs/skill-audit-runner.md`.
-
-For projects that span multiple domains, use `docs/multi-skill-routing-matrix.md` to choose one primary Skill and optional secondary Skills.
-
-
----
-
-## Prompt renderer
-
-Render a complete one-shot prompt from any Skill folder:
-
-```bash
-python scripts/render_skill_prompt.py 13-factor-product-readiness --target ./my-repo --out ./tmp/product-readiness-prompt.md
-```
-
-Use this when you want to hand a full Skill pack to another Agent or repeat the same review in a new conversation.
-
----
-
-
-## Skill catalog exporter
-
-Generate a manifest-driven catalog for maintainers and Agents:
-
-```bash
-python scripts/export_skill_catalog.py . --markdown docs/generated-skill-catalog.md --json docs/generated-skill-catalog.json
-```
-
-Use `6-factor-docs` when README, guides, examples, release notes, and Agent handoff prompts need to become clear, accurate, and adoption-ready. Use `15-factor-observability` when logs, traces, validation summaries, release evidence, debugging UX, or Agent handoff artifacts are weak.
-
-## Product readiness pass
-
-When a repository is useful but still feels like a demo, start with:
+## Repository Layout
 
 ```text
-Use the 13-factor-product-readiness skill to audit this repository for launch readiness, onboarding, product polish, release discipline, Agent-native usage, and open-source credibility.
+product-factor-skills/
+  README.md
+  SKILL.md
+  VERSION
+  product-factor-skills.json
+  skills.json
+  skills/
+    12-factor-agents/
+    12-factor-app/
+    10-factor-html/
+    8-factor-github-actions/
+    9-factor-rag/
+    7-factor-mcp/
+    11-factor-cli/
+    13-factor-product-readiness/
+    6-factor-docs/
+    5-factor-evals/
+    14-factor-security-privacy/
+    15-factor-observability/
+  scripts/
+  templates/
+  docs/
+  examples/
+  guides/
+  schemas/
+  skill-factory/
 ```
 
-Then pair it with a domain-specific Skill such as `12-factor-agents`, `12-factor-app`, `10-factor-html`, `8-factor-github-actions`, `9-factor-rag`, `7-factor-mcp`, `11-factor-cli`, `6-factor-docs`, `14-factor-security-privacy`, or `15-factor-observability`.
+## Output Contract
 
----
+Every Skill is designed to help an Agent return concrete, reviewable artifacts:
 
-## Release and validation
+- Summary of the target project and selected review lens.
+- Scorecard grounded in checklist evidence.
+- Critical findings ordered by risk and product value.
+- Refactor plan with practical next actions.
+- Validation summary that records what was run and what could not be verified.
+- Decision log for tradeoffs, assumptions, and remaining risks.
+
+See [`docs/output-contract.md`](./docs/output-contract.md) for the shared report shape.
+
+## Skill Factory
+
+Create a new Factor Skill skeleton:
+
+```bash
+python scripts/generate_factor_skill.py xx-factor-cli --title "xx-factor-cli" --category cli
+```
+
+Then update the registry files:
+
+- [`product-factor-skills.json`](./product-factor-skills.json)
+- [`skills.json`](./skills.json)
+- [`docs/generated-skill-catalog.md`](./docs/generated-skill-catalog.md)
+- [`docs/generated-skill-catalog.json`](./docs/generated-skill-catalog.json)
+
+Use [`skill-factory/xx-factor-skill-template`](./skill-factory/xx-factor-skill-template) when you prefer to copy the template manually.
+
+## Release Status
+
+Current version: `v0.9.0`
+
+`v0.9.0` adds `15-factor-observability`, a dependency-free multi-Skill composer, an observability playbook, a composed review template, and expanded validation for twelve bundled Skills.
 
 Before publishing a new version:
 
-1. Update `VERSION`.
-2. Update `CHANGELOG.md` and `RELEASE_NOTES.md`.
-3. Update `logs/iteration-log.md`, `logs/file-manifest.md`, and `logs/version-history.md`.
-4. Run `python scripts/scan_factor_project.py .`.
-5. Zip the full repository, including `.github`.
+1. Update [`VERSION`](./VERSION).
+2. Update [`CHANGELOG.md`](./CHANGELOG.md), [`RELEASE_NOTES.md`](./RELEASE_NOTES.md), and [`logs/version-history.md`](./logs/version-history.md).
+3. Run `python scripts/scan_factor_project.py .`.
+4. Build and verify the release zip.
 
-See `docs/release-checklist.md`.
-
----
+See [`docs/release-checklist.md`](./docs/release-checklist.md).
 
 ## Attribution
 
-`12-factor-agents` is inspired by the HumanLayer 12-factor-agents project. This repository does not include upstream images or upstream source code; it packages the general idea into an Agent-callable Skill pack with checklists, scoring rubrics, refactor workflows, templates, and validation conventions. See `ATTRIBUTION.md`.
+The `12-factor-agents` Skill is inspired by the HumanLayer [`12-factor-agents`](https://github.com/humanlayer/12-factor-agents) project. This repository does not include upstream images or upstream source code; it packages the general idea into an Agent-callable Skill format with checklists, scoring rubrics, refactor workflows, templates, and validation conventions.
 
----
+See [`ATTRIBUTION.md`](./ATTRIBUTION.md) for the license posture.
 
-## Keywords
+## Contributing
+
+Contributions are welcome when they make the Skill pack more usable, more accurate, or easier for Agents to apply consistently.
+
+Good contribution types:
+
+- New Factor Skills.
+- Better checklists and scoring rubrics.
+- Stronger audit or refactor templates.
+- Real before/after examples.
+- Validation scripts and release checks.
+- Documentation improvements.
+
+Read [`CONTRIBUTING.md`](./CONTRIBUTING.md) before adding a Skill.
+
+## Discovery Keywords
 
 Factor Skill, Agent-native, reusable standards, project audit, project refactor, engineering checklist, release readiness, deployability, maintainability, Skill Factory, repeatable optimization.
 
 标准化审查、可复用 Skill、Agent 原生、项目重构、工程清单、发布就绪、可部署、可维护、可扩展、技能工厂、反复优化。
 
----
+## License
 
-## Status
-
-`v0.9.0` adds `15-factor-observability`, a dependency-free multi-Skill composer, observability playbook, composed review template, and expanded validation for twelve bundled Skills.
+MIT. See [`LICENSE`](./LICENSE).
