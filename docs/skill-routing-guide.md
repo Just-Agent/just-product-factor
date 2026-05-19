@@ -8,7 +8,8 @@ This guide helps an Agent choose the right Factor Skill before starting an audit
 |---|---|---|
 | Agent workflow, memory, tools, human approval | `12-factor-agents` | `11-factor-cli` if the Agent ships a CLI |
 | SaaS, API, web app, deployability | `12-factor-app` | `8-factor-github-actions`, `11-factor-cli` |
-| Static HTML, landing page, generated preview | `10-factor-html` | `12-factor-app` if deployability matters |
+| UI, frontend, React, Next.js, Vite, dashboard, static HTML, landing page, generated preview | `10-factor-html` | `12-factor-app` if deployability matters |
+| Mobile app screen, onboarding UI, product flow | `13-factor-product-readiness` | `10-factor-html` for visual polish, `12-factor-app` for app engineering |
 | CI/CD, GitHub Pages, scheduled automation | `8-factor-github-actions` | `12-factor-app` |
 | RAG, retrieval, chunks, citations | `9-factor-rag` | `12-factor-agents` |
 | MCP tools, server/client schema | `7-factor-mcp` | `12-factor-agents` |

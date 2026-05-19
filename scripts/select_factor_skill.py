@@ -21,13 +21,17 @@ STOPWORDS = {
 
 FILE_SIGNALS = {
     "8-factor-github-actions": [".github/workflows", "workflow", "action", "deploy", "ci", "release"],
-    "10-factor-html": [".html", "index.html", "landing", "css", "accessibility", "seo"],
+    "10-factor-html": [
+        ".html", "index.html", "landing", "css", "accessibility", "seo",
+        "ui", "frontend", "react", "next", "next.js", "vite", "tailwind",
+        "dashboard", "responsive", "visual", "screen", "mobile ui"
+    ],
     "11-factor-cli": ["cli", "bin", "argparse", "commander", "click", "--help"],
     "12-factor-agents": ["agent", "tool", "memory", "prompt", "workflow", "human-in-the-loop"],
-    "12-factor-app": ["app", "api", "service", "server", "config", "docker", "deploy"],
+    "12-factor-app": ["app", "api", "service", "server", "config", "docker", "deploy", "frontend app", "web app", "mobile app"],
     "9-factor-rag": ["rag", "retrieval", "embedding", "chunk", "vector", "citation"],
     "7-factor-mcp": ["mcp", "tool schema", "server", "client", "permission"],
-    "13-factor-product-readiness": ["roadmap", "release", "onboarding", "launch", "README", "CHANGELOG"],
+    "13-factor-product-readiness": ["roadmap", "release", "onboarding", "launch", "README", "CHANGELOG", "product flow", "mobile app"],
     "6-factor-docs": ["docs", "guide", "quickstart", "README", "example", "tutorial"],
     "5-factor-evals": ["eval", "evaluation", "test", "benchmark", "golden", "regression", "failure"],
     "14-factor-security-privacy": ["security", "privacy", "secret", "token", "credential", "permission", "workflow", "pii", "data retention", "supply-chain"],

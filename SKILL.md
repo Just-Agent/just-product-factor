@@ -1,3 +1,8 @@
+---
+name: just-product-factor
+description: Route product, UI, frontend, app, Agent, RAG, MCP, CLI, GitHub Actions, docs, security, observability, and release-readiness tasks to the right Factor Skill. Use when auditing, refactoring, packaging, or improving a project and the best review lens is not yet obvious.
+---
+
 # product-factor-skills Root Skill
 
 ## Name
@@ -16,6 +21,7 @@ Use this root Skill when:
 - The user provides a zip and asks for the next version.
 - The user asks which Factor Skill should apply.
 - The project spans multiple domains such as Agent, App, HTML, GitHub Actions, RAG, MCP, CLI, docs, product readiness, security/privacy, and observability.
+- The project involves UI, frontend, React/Next/Vite, dashboards, landing pages, mobile app screens, or HTML previews and needs a product-quality review route.
 - The user wants to create a new `xx-factor-*` Skill.
 
 ## When not to use
@@ -42,7 +48,7 @@ Do not use this root Skill when the user already selected a specific Skill and t
 |---|---|
 | Agent project, tools, memory, evals | `skills/12-factor-agents/` |
 | App, API, SaaS, deployability | `skills/12-factor-app/` |
-| HTML, landing page, generated preview | `skills/10-factor-html/` |
+| UI, frontend, React/Next/Vite, dashboard, landing page, generated preview, HTML | `skills/10-factor-html/`, optionally paired with `skills/12-factor-app/` |
 | GitHub Actions, CI/CD, release workflow | `skills/8-factor-github-actions/` |
 | RAG, retrieval, citations | `skills/9-factor-rag/` |
 | Evals, golden cases, regression tests, release gates | `skills/5-factor-evals/` |
