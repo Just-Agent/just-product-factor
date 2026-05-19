@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./docs/readme-assets/just-product-factor.svg" alt="just-product-factor wordmark" width="760" />
+  <img src="./docs/readme-assets/just-product-factor.svg" alt="just-product-factor Factor Router logo" width="360" />
   <h1>just-product-factor</h1>
   <p><strong>Turn engineering standards into reusable Agent Skills for repeatable product audits, refactors, and release checks.</strong></p>
   <p><strong>把优秀工程标准，变成 Agent 可以反复调用的产品优化技能。</strong></p>

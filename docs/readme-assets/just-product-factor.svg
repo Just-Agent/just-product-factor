@@ -1,44 +1,68 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="260" viewBox="0 0 960 260" role="img" aria-labelledby="title desc">
-  <title id="title">just-product-factor wordmark</title>
-  <desc id="desc">A routing card wordmark for the just-product-factor repository.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="360" viewBox="0 0 760 360" role="img" aria-labelledby="title desc">
+  <title id="title">just-product-factor Factor Router logo</title>
+  <desc id="desc">An original README logo showing a checked review document, routing nodes, and a pencil for the just-product-factor skill router.</desc>
   <defs>
-    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0f172a"/>
-      <stop offset="0.52" stop-color="#1e293b"/>
-      <stop offset="1" stop-color="#0f766e"/>
+    <linearGradient id="cardBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#eefdf8"/>
     </linearGradient>
-    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#38bdf8"/>
-      <stop offset="1" stop-color="#34d399"/>
+    <linearGradient id="teal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#14b8a6"/>
+      <stop offset="1" stop-color="#22c55e"/>
     </linearGradient>
-    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#020617" flood-opacity="0.24"/>
+    <linearGradient id="pencil" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fbbf24"/>
+      <stop offset="1" stop-color="#f97316"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#0f172a" flood-opacity="0.18"/>
     </filter>
   </defs>
-  <rect width="960" height="260" rx="36" fill="#f8fafc"/>
-  <rect x="30" y="30" width="900" height="200" rx="30" fill="url(#panel)" filter="url(#softShadow)"/>
-  <g transform="translate(72 68)">
-    <rect x="0" y="0" width="124" height="124" rx="28" fill="#f8fafc" opacity="0.98"/>
-    <path d="M35 41h54M35 62h54M35 83h34" stroke="#0f172a" stroke-width="8" stroke-linecap="round"/>
-    <circle cx="91" cy="84" r="12" fill="url(#accent)"/>
-    <path d="M88 84h42M130 42h32M130 84h32" stroke="url(#accent)" stroke-width="8" stroke-linecap="round"/>
-    <circle cx="170" cy="42" r="11" fill="#38bdf8"/>
-    <circle cx="170" cy="84" r="11" fill="#34d399"/>
+
+  <rect x="0" y="0" width="760" height="360" rx="42" fill="url(#cardBg)"/>
+  <circle cx="618" cy="78" r="58" fill="#bae6fd" opacity="0.55"/>
+  <circle cx="150" cy="258" r="64" fill="#bbf7d0" opacity="0.55"/>
+  <circle cx="612" cy="258" r="36" fill="#ccfbf1" opacity="0.75"/>
+
+  <g filter="url(#shadow)">
+    <rect x="214" y="54" width="300" height="200" rx="28" fill="#ffffff" stroke="#0f172a" stroke-width="8"/>
+    <path d="M248 94h72" stroke="#0f766e" stroke-width="12" stroke-linecap="round"/>
+    <path d="M248 126h158" stroke="#0f172a" stroke-width="16" stroke-linecap="round"/>
+    <path d="M248 160h190" stroke="#cbd5e1" stroke-width="8" stroke-linecap="round"/>
+    <path d="M248 184h130" stroke="#e2e8f0" stroke-width="8" stroke-linecap="round"/>
+    <rect x="248" y="206" width="56" height="20" rx="10" fill="#dbeafe"/>
+    <rect x="316" y="206" width="58" height="20" rx="10" fill="#dcfce7"/>
+    <rect x="386" y="206" width="58" height="20" rx="10" fill="#fef3c7"/>
   </g>
-  <g transform="translate(280 78)">
-    <text x="0" y="48" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="46" font-weight="800" fill="#ffffff">just-product-factor</text>
-    <text x="2" y="92" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="23" font-weight="600" fill="#cbd5e1">Agent-native review router for product, UI, app, RAG, MCP, CLI, docs, security, and release work.</text>
-    <g transform="translate(0 122)" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="17" font-weight="700">
-      <rect x="0" y="0" width="92" height="30" rx="15" fill="#ecfeff" opacity="0.96"/>
-      <text x="18" y="21" fill="#0f766e">UI</text>
-      <rect x="104" y="0" width="104" height="30" rx="15" fill="#ecfeff" opacity="0.96"/>
-      <text x="128" y="21" fill="#0f766e">App</text>
-      <rect x="220" y="0" width="104" height="30" rx="15" fill="#ecfeff" opacity="0.96"/>
-      <text x="242" y="21" fill="#0f766e">RAG</text>
-      <rect x="336" y="0" width="104" height="30" rx="15" fill="#ecfeff" opacity="0.96"/>
-      <text x="358" y="21" fill="#0f766e">MCP</text>
-      <rect x="452" y="0" width="104" height="30" rx="15" fill="#ecfeff" opacity="0.96"/>
-      <text x="476" y="21" fill="#0f766e">CLI</text>
-    </g>
+
+  <path d="M190 142c23 1 39 21 49 39 35-55 73-82 118-96" fill="none" stroke="url(#teal)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g transform="translate(494 82) rotate(-14 38 96)" filter="url(#shadow)">
+    <rect x="19" y="0" width="38" height="132" rx="18" fill="url(#pencil)" stroke="#0f172a" stroke-width="6"/>
+    <path d="M20 121h36l-18 42z" fill="#f8fafc" stroke="#0f172a" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M33 153l5 10 5-10z" fill="#0f172a"/>
+    <path d="M20 35h36" stroke="#fb923c" stroke-width="6"/>
+  </g>
+
+  <g stroke="#0f172a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M118 118h52"/>
+    <path d="M590 128h52"/>
+    <path d="M118 222h52"/>
+    <path d="M590 222h52"/>
+  </g>
+  <g font-family="Inter, Segoe UI, Arial, sans-serif" font-size="17" font-weight="800">
+    <rect x="70" y="96" width="76" height="44" rx="18" fill="#ecfeff" stroke="#14b8a6" stroke-width="4"/>
+    <text x="95" y="124" fill="#0f766e">UI</text>
+    <rect x="616" y="106" width="86" height="44" rx="18" fill="#eff6ff" stroke="#3b82f6" stroke-width="4"/>
+    <text x="640" y="134" fill="#1d4ed8">APP</text>
+    <rect x="70" y="200" width="88" height="44" rx="18" fill="#fefce8" stroke="#eab308" stroke-width="4"/>
+    <text x="94" y="228" fill="#854d0e">RAG</text>
+    <rect x="616" y="200" width="90" height="44" rx="18" fill="#f5f3ff" stroke="#8b5cf6" stroke-width="4"/>
+    <text x="638" y="228" fill="#6d28d9">MCP</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="186" y="258" width="388" height="62" rx="18" fill="#0f172a"/>
+    <text x="380" y="299" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" font-weight="900" fill="#ffffff" letter-spacing="1.4">FACTOR ROUTER</text>
   </g>
 </svg>
