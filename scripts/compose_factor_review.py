@@ -26,11 +26,15 @@ DOMAIN_HINTS = {
     "7-factor-mcp": ["mcp", "tool schema", "server", "client", "permission", "integration"],
     "8-factor-github-actions": ["github actions", "workflow", "ci", "cd", "deploy", "release", "cache"],
     "9-factor-rag": ["rag", "retrieval", "embedding", "chunk", "vector", "citation", "context"],
-    "10-factor-html": ["html", "landing", "seo", "accessibility", "responsive", "page", "css"],
+    "10-factor-html": [
+        "html", "landing", "seo", "accessibility", "responsive", "page", "css",
+        "ui", "frontend", "react", "next", "next.js", "vite", "tailwind",
+        "dashboard", "visual", "screen", "mobile ui"
+    ],
     "11-factor-cli": ["cli", "command", "terminal", "--help", "argparse", "packaging"],
     "12-factor-agents": ["agent", "tool call", "memory", "prompt", "workflow", "human-in-the-loop"],
-    "12-factor-app": ["app", "api", "service", "saas", "config", "docker", "deploy"],
-    "13-factor-product-readiness": ["product", "launch", "open-source", "onboarding", "roadmap", "release readiness"],
+    "12-factor-app": ["app", "api", "service", "saas", "config", "docker", "deploy", "frontend app", "web app", "mobile app"],
+    "13-factor-product-readiness": ["product", "launch", "open-source", "onboarding", "roadmap", "release readiness", "product flow", "mobile app"],
     "14-factor-security-privacy": ["security", "privacy", "secret", "token", "credential", "permission", "pii", "data"],
     "15-factor-observability": ["observability", "log", "logging", "metric", "trace", "debug", "artifact", "failure"],
 }
