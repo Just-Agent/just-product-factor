@@ -1,4 +1,5 @@
 <div align="center">
+  <img src="./docs/readme-assets/just-product-factor.svg" alt="just-product-factor wordmark" width="760" />
   <h1>just-product-factor</h1>
   <p><strong>Turn engineering standards into reusable Agent Skills for repeatable product audits, refactors, and release checks.</strong></p>
   <p><strong>把优秀工程标准，变成 Agent 可以反复调用的产品优化技能。</strong></p>
@@ -12,6 +13,8 @@
   <p>
     <a href="./docs/generated-skill-catalog.md">Skill Catalog</a>
     |
+    <a href="./SKILL.md">Router Skill</a>
+    |
     <a href="./docs/agent-invocation-protocol.md">Agent Protocol</a>
     |
     <a href="./docs/multi-skill-composition-guide.md">Composition Guide</a>
@@ -20,7 +23,7 @@
   </p>
 </div>
 
-`just-product-factor` is the public repository for the `product-factor-skills` pack: a lightweight, dependency-free collection of Agent-callable standards for improving Agent systems, apps, CLIs, RAG pipelines, MCP servers, GitHub Actions, documentation, security posture, observability, and product readiness.
+`just-product-factor` is the public repository for the `product-factor-skills` pack: a lightweight, dependency-free router plus twelve Agent-callable Factor Skills for improving Agent systems, UI/frontends, apps, CLIs, RAG pipelines, MCP servers, GitHub Actions, documentation, security posture, observability, and product readiness.
 
 It is not a heavy framework. It is a practical review system that turns a method into a repeatable working unit:
 
@@ -36,31 +39,49 @@ engineering standard
 
 ## 30-Second Start
 
-Clone the repository and ask the selector which Skill should lead a review:
+Clone the repository and ask the router which Skill should lead a review:
 
 ```bash
 git clone https://github.com/Just-Agent/just-product-factor.git
 cd just-product-factor
-python scripts/select_factor_skill.py "prepare this Agent product for public release with security and observability" --root . --top 4
+python scripts/select_factor_skill.py "audit this React frontend dashboard for UI polish accessibility performance and app deployability" --root . --top 5
+```
+
+Expected route:
+
+```text
+Primary Skill: 10-factor-html
+Secondary Skill: 12-factor-app
 ```
 
 Generate a multi-Skill review plan:
 
 ```bash
-python scripts/compose_factor_review.py "prepare this Agent product for public release with security and observability" --root . --target ./examples/sample-agent-project --max-skills 4 --out ./tmp/composed-review
-```
-
-Validate the Skill pack:
-
-```bash
-python scripts/scan_factor_project.py .
+python scripts/compose_factor_review.py "prepare this UI app for release with accessibility app deployability docs and observability" --root . --target ./examples/sample-agent-project --max-skills 5 --out ./tmp/composed-review
 ```
 
 Expected result:
 
 ```text
-PASS: product-factor-skills validation passed
+10-factor-html
+12-factor-app
+8-factor-github-actions
+6-factor-docs
+15-factor-observability
 ```
+
+## Router Preview
+
+The root [`SKILL.md`](./SKILL.md) is the entrypoint. It decides whether a task should use one specific Skill or a composed review plan.
+
+| User says | Primary route | Useful secondary routes |
+|---|---|---|
+| "Audit this React frontend dashboard UI" | [`10-factor-html`](./skills/10-factor-html) | [`12-factor-app`](./skills/12-factor-app), [`13-factor-product-readiness`](./skills/13-factor-product-readiness) |
+| "Prepare this app for release" | [`12-factor-app`](./skills/12-factor-app) | [`8-factor-github-actions`](./skills/8-factor-github-actions), [`6-factor-docs`](./skills/6-factor-docs) |
+| "Review this mobile onboarding flow" | [`13-factor-product-readiness`](./skills/13-factor-product-readiness) | [`10-factor-html`](./skills/10-factor-html), [`12-factor-app`](./skills/12-factor-app) |
+| "Audit this RAG pipeline" | [`9-factor-rag`](./skills/9-factor-rag) | [`5-factor-evals`](./skills/5-factor-evals), [`12-factor-agents`](./skills/12-factor-agents) |
+| "Review this MCP server schema and permissions" | [`7-factor-mcp`](./skills/7-factor-mcp) | [`14-factor-security-privacy`](./skills/14-factor-security-privacy), [`12-factor-agents`](./skills/12-factor-agents) |
+| "Make this repo easier to debug in future Agent runs" | [`15-factor-observability`](./skills/15-factor-observability) | [`14-factor-security-privacy`](./skills/14-factor-security-privacy) |
 
 ## What You Get
 
@@ -72,6 +93,7 @@ PASS: product-factor-skills validation passed
 | Multi-Skill reviews | Combine product, security, observability, and domain checks | [`scripts/compose_factor_review.py`](./scripts/compose_factor_review.py) |
 | Prompt handoff | Render a full Skill pack into one copyable Agent prompt | [`scripts/render_skill_prompt.py`](./scripts/render_skill_prompt.py) |
 | Release validation | Check structure, manifests, examples, and release artifacts | [`scripts/scan_factor_project.py`](./scripts/scan_factor_project.py) |
+| README identity | Provide a stable visual anchor for the GitHub homepage | [`docs/readme-assets/just-product-factor.svg`](./docs/readme-assets/just-product-factor.svg) |
 
 ## Skill Map
 
@@ -94,13 +116,17 @@ PASS: product-factor-skills validation passed
 
 ```mermaid
 flowchart LR
-  A["User request or target repo"] --> B["Select a Factor Skill"]
-  B --> C["Read skill.json"]
-  C --> D["Read SKILL.md"]
-  D --> E["Apply checklist and scoring rubric"]
-  E --> F["Write audit report"]
-  F --> G["Write refactor plan"]
-  G --> H["Run validation or record limits"]
+  A["User request or target repo"] --> B["Root Router Skill"]
+  B --> C{"One lens or composed review?"}
+  C -->|One lens| D["select_factor_skill.py"]
+  C -->|Multiple lenses| E["compose_factor_review.py"]
+  D --> F["Read selected skill.json and SKILL.md"]
+  E --> G["Read selected Skill pack order"]
+  F --> H["Checklist and scoring rubric"]
+  G --> H
+  H --> I["Audit report"]
+  I --> J["Refactor plan"]
+  J --> K["Validation evidence or honest limits"]
 ```
 
 The full protocol is in [`docs/agent-invocation-protocol.md`](./docs/agent-invocation-protocol.md). For broader projects, use [`docs/multi-skill-routing-matrix.md`](./docs/multi-skill-routing-matrix.md) and [`docs/multi-skill-composition-guide.md`](./docs/multi-skill-composition-guide.md).
@@ -110,8 +136,9 @@ The full protocol is in [`docs/agent-invocation-protocol.md`](./docs/agent-invoc
 | Task | Command |
 |---|---|
 | Validate repository structure | `python scripts/scan_factor_project.py .` |
-| Select a Skill | `python scripts/select_factor_skill.py "audit this RAG app for retrieval quality and regression tests" --root . --top 5` |
-| Compose a review plan | `python scripts/compose_factor_review.py "prepare this Agent product for release" --root . --target ./examples/sample-agent-project --max-skills 4 --out ./tmp/composed-review` |
+| Route a UI/frontend task | `python scripts/select_factor_skill.py "audit this React frontend dashboard for UI polish accessibility performance and app deployability" --root . --top 5` |
+| Route a RAG task | `python scripts/select_factor_skill.py "audit this RAG app for retrieval quality and regression tests" --root . --top 5` |
+| Compose a UI/app release review | `python scripts/compose_factor_review.py "prepare this UI app for release with accessibility app deployability docs and observability" --root . --target ./examples/sample-agent-project --max-skills 5 --out ./tmp/composed-review` |
 | Generate an audit workspace | `python scripts/run_skill_audit.py --repo . --target ./examples/sample-agent-project --skill 12-factor-agents --out ./tmp/agent-audit` |
 | Render a one-shot prompt | `python scripts/render_skill_prompt.py 13-factor-product-readiness --target ./my-repo --out ./tmp/product-readiness-prompt.md` |
 | Export the Skill catalog | `python scripts/export_skill_catalog.py . --markdown docs/generated-skill-catalog.md --json docs/generated-skill-catalog.json` |

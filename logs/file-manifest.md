@@ -2,13 +2,15 @@
 
 Generated for `v0.9.0`.
 
-Total files: 166
+Total files: 169
 
+- `.gitattributes`
 - `.github/ISSUE_TEMPLATE/bug_report.md`
 - `.github/ISSUE_TEMPLATE/docs_improvement.md`
 - `.github/ISSUE_TEMPLATE/skill_request.md`
 - `.github/pull_request_template.md`
 - `.github/workflows/validate.yml`
+- `.gitignore`
 - `ATTRIBUTION.md`
 - `CHANGELOG.md`
 - `CONTRIBUTING.md`
@@ -29,6 +31,7 @@ Total files: 166
 - `docs/observability-playbook.md`
 - `docs/output-contract.md`
 - `docs/product-readiness-playbook.md`
+- `docs/readme-assets/just-product-factor.svg`
 - `docs/release-checklist.md`
 - `docs/security-privacy-playbook.md`
 - `docs/skill-audit-runner.md`
